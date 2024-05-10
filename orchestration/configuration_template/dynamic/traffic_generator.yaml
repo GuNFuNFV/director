@@ -1,0 +1,8 @@
+dynamic_configuration_list: []
+name: traffic_generator
+options:
+- conjecture: '1'
+  name: traffic_class_num
+static_configuration_list:
+- instance_num: traffic_class_num
+  name: traffic_class

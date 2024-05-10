@@ -1,0 +1,8 @@
+dynamic_configuration_list: []
+name: exp_configuration
+options:
+- conjecture: '1'
+  name: machine_num
+static_configuration_list:
+- instance_num: machine_num
+  name: machine_configuration

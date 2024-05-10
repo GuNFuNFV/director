@@ -1,0 +1,2353 @@
+DistributedRuntimeSetting:
+  0:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 1
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 1
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  1:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 2
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 2
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  2:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 4
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 4
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  3:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 8
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 8
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  4:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  5:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 32
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 32
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  6:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 1
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              3:
+                ControlState: 1
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 1
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 1
+                NFDefinition: 5
+                NFType: 5
+                abstract: true
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 7
+                NFType: 7
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              8:
+                ControlState: 2
+                NFDefinition: 8
+                NFType: 8
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              9:
+                ControlState: 2
+                NFDefinition: 9
+                NFType: 9
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              10:
+                ControlState: 2
+                NFDefinition: 10
+                NFType: 10
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              11:
+                ControlState: 2
+                NFDefinition: 11
+                NFType: 11
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              12:
+                ControlState: 2
+                NFDefinition: 12
+                NFType: 12
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              13:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              14:
+                ControlState: 2
+                NFDefinition: 13
+                NFType: 13
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              15:
+                ControlState: 0
+                NFDefinition: 15
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_first_hash.packet.cuckoo_hash_first_hash_done: 3
+                    cuckoo_hash_first_test.packet.cuckoo_hash_first_test_failure: 4
+                    cuckoo_hash_first_test.packet.cuckoo_hash_test_success: 8
+                    cuckoo_hash_get_key.packet.cuckoo_hash_get_key_done: 2
+                    cuckoo_hash_second_hash.packet.cuckoo_hash_second_hash_done: 5
+                    cuckoo_hash_second_test.packet.cuckoo_hash_test_success: 8
+                type: cuckoo_hash
+              2:
+                composed_nf: '2'
+                parameters:
+                  datapacking: 1
+                  reserved: 0
+                  sfc_length: 1
+                  transition:
+                    fifth_action.packet: 15
+                    fifth_action.sixth_action: 13
+                    first_action.packet: 15
+                    first_action.second_action: 9
+                    fourth_action.fifth_action: 12
+                    fourth_action.packet: 15
+                    prefetch_action.packet: 15
+                    second_action.packet: 15
+                    second_action.third_action: 10
+                    sixth_action.packet: 15
+                    third_action.fourth_action: 11
+                    third_action.packet: 15
+                type: sfc_simulation
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1_0'
+                type: cuckoo_hash_get_key
+              2:
+                is_abstract: false
+                name: '1_1'
+                type: cuckoo_hash_first_hash
+              3:
+                is_abstract: false
+                name: '1_2'
+                type: cuckoo_hash_first_test
+              4:
+                is_abstract: false
+                name: '1_3'
+                type: cuckoo_hash_second_hash
+              5:
+                is_abstract: false
+                name: '1_4'
+                type: cuckoo_hash_second_test
+              6:
+                is_abstract: true
+                name: '1'
+                type: cuckoo_hash
+              7:
+                is_abstract: false
+                name: '2_0'
+                type: prefetch_action
+              8:
+                is_abstract: false
+                name: '2_1'
+                type: first_action
+              9:
+                is_abstract: false
+                name: '2_2'
+                type: second_action
+              10:
+                is_abstract: false
+                name: '2_3'
+                type: third_action
+              11:
+                is_abstract: false
+                name: '2_4'
+                type: fourth_action
+              12:
+                is_abstract: false
+                name: '2_5'
+                type: fifth_action
+              13:
+                is_abstract: false
+                name: '2_6'
+                type: sixth_action
+              14:
+                is_abstract: true
+                name: '2'
+                type: sfc_simulation
+              15:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_get_key
+              2: cuckoo_hash_first_hash
+              3: cuckoo_hash_first_test
+              4: cuckoo_hash_second_hash
+              5: cuckoo_hash_second_test
+              6: cuckoo_hash
+              7: prefetch_action
+              8: first_action
+              9: second_action
+              10: third_action
+              11: fourth_action
+              12: fifth_action
+              13: sixth_action
+              14: sfc_simulation
+              15: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 64
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 64
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []

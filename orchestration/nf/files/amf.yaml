@@ -1,0 +1,18 @@
+category: stateful_action
+flow_state_variables:
+  - name: generic_state_variable
+    size: 512 # 512/64= 8 cache lines
+    # shared cache line: 1
+    # 2 for method 1
+    # 2 for method 2
+    # 3 for method 3
+transitions:
+    - Start, packet -> amf_dispatcher
+    - amf_dispatcher, amf_session.unregistered -> amf_unregistered_handler
+    - amf_unregistered_handler, packet -> End
+    - amf_dispatcher, amf_session.registered -> amf_registered_handler
+    - amf_registered_handler, packet -> End
+    - amf_dispatcher, amf_session.context_setup -> amf_context_setup_handler
+    - amf_context_setup_handler, packet -> End
+    - amf_dispatcher, amf_session.authentication -> amf_authentication_handler
+    - amf_authentication_handler, packet -> End

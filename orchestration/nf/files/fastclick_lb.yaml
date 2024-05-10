@@ -1,0 +1,4 @@
+category: stateless_action
+transitions:
+  - Start , packet -> Self
+  - Self, packet -> End

@@ -1,0 +1,35 @@
+dynamic_configuration_list:
+- composed_nf_dynamic_configuration
+name: worker_configuration
+options:
+- name: num_possible_interleaved_threads
+- name: worker_destination_instance
+- name: worker_composed_nf
+  available_values:
+  - cuckoo_hash_generic
+  - cuckoo_rtc_generic
+  - passthrough
+  - traffic_generator
+  - cuckoo_rtc_generic_2
+  - cuckoo_rtc_generic_3
+  - cuckoo_rtc_generic_4
+  - cuckoo_rtc_generic_5
+  - cuckoo_rtc_generic_6
+  - amf
+  - cuckoo_hash_generic_2
+  - cuckoo_hash_generic_3
+  - cuckoo_hash_generic_4
+  - cuckoo_hash_generic_5
+  - cuckoo_hash_generic_6
+  - amf_non_temporal
+  - upf_monolithic
+  - upf_interleaved
+  - amf_monolithic
+  - bess_nat
+  - fastclick_lb
+  - amf_free5gc
+  - sfc_simulation
+  - traffic_generator_sink
+  conjecture: '2' # non-fixible-conjecture, needed to be input in the runtime_agent
+
+static_configuration_list: []

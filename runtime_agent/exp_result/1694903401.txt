@@ -1,0 +1,57 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cycles'
+# Event count (approx.): 5617595489
+#
+# Overhead  Command       Shared Object            Symbol                            
+# ........  ............  .......................  ..................................
+#
+    31.61%  rte-worker-2  librte_net_mlx5.so.23.0  [.] rxq_cq_process_v
+    21.41%  rte-worker-2  nflr                     [.] worker_fsm_amac_thread
+    11.70%  rte-worker-2  librte_net_mlx5.so.23.0  [.] mlx5_rx_burst_vec
+     8.87%  rte-worker-2  libc-2.31.so             [.] __memcmp_avx2_movbe
+     7.95%  rte-worker-2  nflr                     [.] interval_tree_load_key
+     6.15%  rte-worker-2  nflr                     [.] interval_tree_compare
+     3.02%  rte-worker-2  librte_net_mlx5.so.23.0  [.] mlx5_tx_handle_completion
+     2.67%  rte-worker-2  librte_net_mlx5.so.23.0  [.] rxq_cq_decompress_v
+     1.64%  rte-worker-2  nflr                     [.] cuckoo_hash_first_test
+     1.32%  rte-worker-2  librte_net_mlx5.so.23.0  [.] mlx5_tx_burst_i_empw
+     1.22%  rte-worker-2  nflr                     [.] cuckoo_hash_first_hash
+     0.87%  rte-worker-2  nflr                     [.] send_packet
+     0.53%  rte-worker-2  nflr                     [.] cuckoo_hash_get_key
+     0.45%  rte-worker-2  nflr                     [.] upf_encapsulate
+     0.12%  rte-worker-2  nflr                     [.] interval_tree_get_key
+     0.09%  rte-worker-2  librte_mbuf.so.23.0      [.] rte_pktmbuf_free_bulk
+     0.06%  rte-worker-2  [kernel.kallsyms]        [k] perf_event_task_tick
+     0.03%  rte-worker-2  [kernel.kallsyms]        [k] timekeeping_advance
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] rcu_segcblist_ready_cbs
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] rb_next
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] hrtimer_interrupt
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] task_tick_fair
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] perf_swevent_stop
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] cpuacct_account_field
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] __hrtimer_run_queues
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] update_cfs_group
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] rb_insert_color
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] tick_do_update_jiffies64
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] update_load_avg
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] update_curr
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] native_write_msr
+     0.02%  rte-worker-2  nflr                     [.] cuckoo_hash_second_test
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] _raw_spin_lock_irqsave
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] update_rq_clock
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] __update_load_avg_cfs_rq
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] exit_to_user_mode_prepare
+     0.02%  rte-worker-2  [kernel.kallsyms]        [k] ksoftirqd_running
+     0.00%  perf          [kernel.kallsyms]        [k] entry_SYSCALL_64_after_hwframe
+     0.00%  perf          [kernel.kallsyms]        [k] native_flush_tlb_one_user
+     0.00%  perf          [kernel.kallsyms]        [k] perf_event_nmi_handler
+     0.00%  perf          [kernel.kallsyms]        [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

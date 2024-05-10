@@ -1,0 +1,7 @@
+dynamic_configuration_list: []
+name: amf
+options:
+  - name: amf_free5gc
+  - name: current_cstate
+static_configuration_list: []
+

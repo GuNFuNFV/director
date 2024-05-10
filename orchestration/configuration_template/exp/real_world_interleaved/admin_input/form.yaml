@@ -1,0 +1,165 @@
+global_options:
+  machine_ip: None
+  num_possible_interleaved_threads: 16
+  cuckoo_hash_entry_num: 20
+  cuckoo_hash_header_type: 0
+  cuckoo_hash_key_size: 16
+  generic_access_mode: 0
+  generic_access_size: 0
+  destination_instance: 0
+  flow_id_lower: None
+  flow_id_upper: None
+  packet_size: None
+  proportion: 60
+  subflow_id_lower: 0
+  subflow_id_upper: 0
+template_options:
+  Machine2_Traffic5_Worker1$real_world_interleaved_0.yaml:
+    options:
+      machine_ip: None
+      num_possible_interleaved_threads: None
+      cuckoo_hash_entry_num: None
+      cuckoo_hash_header_type: None
+      cuckoo_hash_key_size: None
+      generic_access_mode: None
+      generic_access_size: None
+      destination_instance: None
+      flow_id_lower: None
+      flow_id_upper: None
+      packet_size: None
+      proportion: None
+      subflow_id_lower: None
+      subflow_id_upper: None
+    all_options:
+    - name: cuckoo_hash_entry_num
+      path: root/machine#0/worker#0/cuckoo_hash#1/
+      value: None
+    - name: cuckoo_hash_header_type
+      path: root/machine#0/worker#0/cuckoo_hash#1/
+      value: None
+    - name: cuckoo_hash_key_size
+      path: root/machine#0/worker#0/cuckoo_hash#1/
+      value: None
+    - name: destination_instance
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: destination_instance
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: destination_instance
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: None
+    - name: destination_instance
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: None
+    - name: destination_instance
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: None
+    - name: flow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: 0
+    - name: flow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: 200001
+    - name: flow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: 400001
+    - name: flow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: 600001
+    - name: flow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: 800001
+    - name: flow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: 200000
+    - name: flow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: 400000
+    - name: flow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: 600000
+    - name: flow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: 800000
+    - name: flow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: 1000000
+    - name: generic_access_mode
+      path: root/machine#0/worker#0/cuckoo_hash#1/generic#2/
+      value: None
+    - name: generic_access_size
+      path: root/machine#0/worker#0/cuckoo_hash#1/generic#2/
+      value: None
+    - name: machine_ip
+      path: root/machine#0/
+      value: 128.101.118.40
+    - name: machine_ip
+      path: root/machine#1/
+      value: 128.101.118.41
+    - name: num_possible_interleaved_threads
+      path: root/machine#0/worker#0/
+      value: None
+    - name: num_possible_interleaved_threads
+      path: root/machine#1/worker#0/
+      value: None
+    - name: packet_size
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: 128
+    - name: packet_size
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: 256
+    - name: packet_size
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: 768
+    - name: packet_size
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: 1300
+    - name: packet_size
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: 1400
+    - name: proportion
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: proportion
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: proportion
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: None
+    - name: proportion
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: None
+    - name: proportion
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#2/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#3/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#1/worker#0/traffic_generator#0/traffic_class#4/
+      value: None

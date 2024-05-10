@@ -1,0 +1,40 @@
+global_options:
+  machine_ip: None
+  num_possible_interleaved_threads: None
+  cuckoo_hash_entry_num: None
+  cuckoo_hash_header_type: None
+  cuckoo_hash_key_size: None
+  generic_access_mode: None
+  generic_access_size: None
+template_options:
+  Machine1_Traffic1_Worker1$cuckoo_hash_testing.yaml:
+    options:
+      machine_ip: None
+      num_possible_interleaved_threads: None
+      cuckoo_hash_entry_num: None
+      cuckoo_hash_header_type: None
+      cuckoo_hash_key_size: None
+      generic_access_mode: None
+      generic_access_size: None
+    all_options:
+    - name: machine_ip
+      path: root/machine#0/
+      value: None
+    - name: num_possible_interleaved_threads
+      path: root/machine#0/worker#0/
+      value: None
+    - name: cuckoo_hash_entry_num
+      path: root/machine#0/worker#0/cuckoo_hash_rtc#1/
+      value: None
+    - name: cuckoo_hash_header_type
+      path: root/machine#0/worker#0/cuckoo_hash_rtc#1/
+      value: None
+    - name: cuckoo_hash_key_size
+      path: root/machine#0/worker#0/cuckoo_hash_rtc#1/
+      value: None
+    - name: generic_access_mode
+      path: root/machine#0/worker#0/cuckoo_hash_rtc#1/generic#2/
+      value: None
+    - name: generic_access_size
+      path: root/machine#0/worker#0/cuckoo_hash_rtc#1/generic#2/
+      value: None

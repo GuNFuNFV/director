@@ -1,0 +1,5 @@
+dynamic_configuration_list: []
+name: bess_nat
+options:
+- name: cuckoo_hash_entry_num
+static_configuration_list: []

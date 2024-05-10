@@ -1,0 +1,45 @@
+'12':
+  matching_time_pp: 29.02497594208238
+  packet_header_time_pp: 21.091542779463996
+  per_flow_state_time_pp: 8.4366171117856
+  per_packet_processing_time: 180.7846523954057
+'13':
+  matching_time_pp: 32.87932015644109
+  packet_header_time_pp: 21.740100695539248
+  per_flow_state_time_pp: 8.676009088401209
+  per_packet_processing_time: 187.79240451084866
+'14':
+  matching_time_pp: 34.60728893321581
+  packet_header_time_pp: 20.74986957630223
+  per_flow_state_time_pp: 9.938244781112996
+  per_packet_processing_time: 189.1797864425063
+'15':
+  matching_time_pp: 37.311786551775306
+  packet_header_time_pp: 20.299911571841047
+  per_flow_state_time_pp: 11.249736198046518
+  per_packet_processing_time: 193.7939052204396
+'16':
+  matching_time_pp: 44.19784081273429
+  packet_header_time_pp: 21.70407349798271
+  per_flow_state_time_pp: 14.400299011667816
+  per_packet_processing_time: 214.39651133996747
+'17':
+  matching_time_pp: 53.49824639828957
+  packet_header_time_pp: 21.470105061901798
+  per_flow_state_time_pp: 17.587548503437695
+  per_packet_processing_time: 236.02167528657162
+'18':
+  matching_time_pp: 60.66164752901343
+  packet_header_time_pp: 21.264059153237874
+  per_flow_state_time_pp: 18.46489450768144
+  per_packet_processing_time: 261.6041724819094
+'19':
+  matching_time_pp: 67.04201664463308
+  packet_header_time_pp: 21.75075040320726
+  per_flow_state_time_pp: 17.962568122367284
+  per_packet_processing_time: 278.20188108983916
+'20':
+  matching_time_pp: 72.09779553741707
+  packet_header_time_pp: 22.136729313465654
+  per_flow_state_time_pp: 17.338263430848016
+  per_packet_processing_time: 289.93751556602035

@@ -1,0 +1,23 @@
+machine#0:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    worker_composed_nf: passthrough
+  worker_num: 1
+machine#1:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    traffic_generator#0:
+      traffic_class#0:
+        destination_instance: '%destination_instance%'
+        flow_id_lower: '%flow_id_lower%'
+        flow_id_upper: '%flow_id_upper%'
+        packet_size: '%packet_size%'
+        proportion: '%proportion%'
+        subflow_id_lower: '%subflow_id_lower%'
+        subflow_id_upper: '%subflow_id_upper%'
+      traffic_class_num: 1
+    worker_composed_nf: traffic_generator
+  worker_num: 1
+machine_num: 2

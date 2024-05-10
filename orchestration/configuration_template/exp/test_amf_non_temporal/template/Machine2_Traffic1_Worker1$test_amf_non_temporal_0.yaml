@@ -1,0 +1,30 @@
+machine#0:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    cuckoo_hash_non_temporal#1:
+      amf#2:
+        prefetch_mode: '%prefetch_mode%'
+        reserved: '%reserved%'
+      cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+      cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+      cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    worker_composed_nf: amf_non_temporal
+  worker_num: 1
+machine#1:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    traffic_generator#0:
+      traffic_class#0:
+        destination_instance: '%destination_instance%'
+        flow_id_lower: '%flow_id_lower%'
+        flow_id_upper: '%flow_id_upper%'
+        packet_size: '%packet_size%'
+        proportion: '%proportion%'
+        subflow_id_lower: '%subflow_id_lower%'
+        subflow_id_upper: '%subflow_id_upper%'
+      traffic_class_num: 1
+    worker_composed_nf: traffic_generator
+  worker_num: 1
+machine_num: 2

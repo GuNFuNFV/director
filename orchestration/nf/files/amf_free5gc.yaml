@@ -1,0 +1,781 @@
+action_state:
+  Authentication:
+  - rw: write
+    variable_name: AmfUe_AusfId
+  - rw: write
+    variable_name: AmfUe_AusfUri
+  - rw: write
+    variable_name: AmfUe_ABBA
+  - rw: read
+    variable_name: AmfUe_AuthenticationCtx
+  - rw: write
+    variable_name: AmfUe_UnauthenticatedSupi
+  - rw: write
+    variable_name: AmfUe_Kseaf
+  - rw: write
+    variable_name: AmfUe_Supi
+  - rw: write
+    variable_name: AmfUe_Kamf
+  AuthenticationProcedure:
+  - rw: read
+    variable_name: AmfUe_Supi
+  - rw: read
+    variable_name: AmfUe_Suci
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_NgKsi_Ksi
+  - rw: read
+    variable_name: AmfUe_MacFailed
+  BuildSecurityModeCommand:
+  - rw: write
+    variable_name: AmfUe_ULCount
+  - rw: write
+    variable_name: AmfUe_DLCount
+  ContextSetup:
+  - rw: read
+    variable_name: AmfUe_ServingAmfChanged
+  - rw: read
+    variable_name: AmfUe_Pei
+  - rw: read
+    variable_name: AmfUe_RegistrationType5GS
+  DeRegistered:
+  - rw: write
+    variable_name: AmfUe_RetransmissionOfInitialNASMsg
+  - rw: write
+    variable_name: AmfUe_RegistrationRequest
+  - rw: write
+    variable_name: AmfUe_RegistrationType5GS
+  - rw: write
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: write
+    variable_name: AmfUe_IdentityTypeUsedForRegistration
+  - rw: write
+    variable_name: AmfUe_Suci
+  - rw: write
+    variable_name: AmfUe_PlmnId
+  - rw: write
+    variable_name: AmfUe_NgKsi_Tsc
+  - rw: write
+    variable_name: AmfUe_NgKsi_Ksi
+  - rw: write
+    variable_name: AmfUe_Location
+  - rw: write
+    variable_name: AmfUe_Tai
+  - rw: write
+    variable_name: AmfUe_UESecurityCapability
+  - rw: read
+    variable_name: AmfUe_ServingAmfChanged
+  HandleAuthenticationResponse:
+  - rw: write
+    variable_name: AmfUe_T3560
+  HandleInitialRegistration:
+  - rw: read
+    variable_name: AmfUe_Kgnb
+  - rw: write
+    variable_name: AmfUe_NCC
+  - rw: read
+    variable_name: AmfUe_NudmSDMUri
+  - rw: read
+    variable_name: AmfUe_Supi
+  - rw: read
+    variable_name: AmfUe_PcfUri
+  - rw: read
+    variable_name: AmfUe_Supi
+  - rw: read
+    variable_name: AmfUe_Pei
+  - rw: read
+    variable_name: AmfUe_Gpsi
+  - rw: read
+    variable_name: AmfUe_PlmnId
+  - rw: read
+    variable_name: AmfUe_AccessAndMobilitySubscriptionData
+  HandleNAS:
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_IntegrityAlg
+  - rw: read
+    variable_name: AmfUe_KnasInt
+  - rw: read
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_KnasEnc
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_IntegrityAlg
+  - rw: read
+    variable_name: AmfUe_KnasInt
+  - rw: read
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_KnasEnc
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_IntegrityAlg
+  - rw: read
+    variable_name: AmfUe_KnasInt
+  - rw: read
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_KnasEnc
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_ULCount
+  HandleRegistrationComplete:
+  - rw: write
+    variable_name: AmfUe_T3550
+  HandleRegistrationRequest:
+  - rw: read
+    variable_name: AmfUe_T3513
+  - rw: read
+    variable_name: AmfUe_T3565
+  HandleSecurityModeComplete:
+  - rw: write
+    variable_name: AmfUe_T3560
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_NgKsi_Ksi
+  - rw: read
+    variable_name: AmfUe_MacFailed
+  - rw: read
+    variable_name: AmfUe_Kgnb
+  - rw: write
+    variable_name: AmfUe_NCC
+  NewAmfUe:
+  - rw: write
+    variable_name: AmfUe_servingAMF
+  - rw: write
+    variable_name: AmfUe_State
+  - rw: write
+    variable_name: AmfUe_State_models_AccessType__3_GPP_ACCESS_
+  - rw: write
+    variable_name: AmfUe_State_models_AccessType_NON_3_GPP_ACCESS_
+  - rw: write
+    variable_name: AmfUe_UnauthenticatedSupi
+  - rw: write
+    variable_name: AmfUe_EventSubscriptionsInfo
+  - rw: write
+    variable_name: AmfUe_RanUe
+  - rw: write
+    variable_name: AmfUe_RegistrationArea
+  - rw: write
+    variable_name: AmfUe_AllowedNssai
+  - rw: write
+    variable_name: AmfUe_N1N2MessageIDGenerator
+  - rw: write
+    variable_name: AmfUe_N1N2MessageSubscribeIDGenerator
+  - rw: write
+    variable_name: AmfUe_onGoing
+  - rw: write
+    variable_name: AmfUe_onGoing_models_AccessType_NON_3_GPP_ACCESS_
+  - rw: write
+    variable_name: AmfUe_onGoing_models_AccessType_NON_3_GPP_ACCESS__Procedure
+  - rw: write
+    variable_name: AmfUe_onGoing_models_AccessType__3_GPP_ACCESS_
+  - rw: write
+    variable_name: AmfUe_onGoing_models_AccessType__3_GPP_ACCESS__Procedure
+  - rw: write
+    variable_name: AmfUe_ReleaseCause
+  - rw: write
+    variable_name: AmfUe_UeCmRegistered
+  Registered:
+  - rw: write
+    variable_name: AmfUe_RegistrationRequest
+  - rw: write
+    variable_name: AmfUe_RegistrationType5GS
+  - rw: write
+    variable_name: AmfUe_IdentityTypeUsedForRegistration
+  - rw: write
+    variable_name: AmfUe_AuthFailureCauseSynchFailureTimes
+  - rw: write
+    variable_name: AmfUe_IdentityRequestSendTimes
+  - rw: write
+    variable_name: AmfUe_ServingAmfChanged
+  - rw: write
+    variable_name: AmfUe_RegistrationAcceptForNon3GPPAccess
+  - rw: write
+    variable_name: AmfUe_RetransmissionOfInitialNASMsg
+  - rw: read
+    variable_name: AmfUe_MacFailed
+  SecurityMode:
+  - rw: read
+    variable_name: AmfUe_SecurityContextAvailable
+  - rw: read
+    variable_name: AmfUe_NgKsi_Ksi
+  - rw: read
+    variable_name: AmfUe_MacFailed
+  - rw: write
+    variable_name: AmfUe_CipheringAlg
+  - rw: write
+    variable_name: AmfUe_IntegrityAlg
+  - rw: write
+    variable_name: AmfUe_IntegrityAlg
+  - rw: write
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_IntegrityAlg
+  - rw: write
+    variable_name: AmfUe_KnasInt
+  SendAuthenticationRequest:
+  - rw: read
+    variable_name: AmfUe_NgKsi
+  - rw: read
+    variable_name: AmfUe_ABBA
+  - rw: read
+    variable_name: AmfUe_AuthenticationCtx_Var5gAuthData
+  SendDownlinkNasTransport:
+  - rw: read
+    variable_name: RanUe_AmfUeNgapId
+  - rw: read
+    variable_name: RanUe_RanUeNgapId
+  - rw: read
+    variable_name: RanUe_AmfUeNgapId
+  - rw: read
+    variable_name: RanUe_RanUeNgapId
+  SendRegistrationAccept:
+  - rw: read
+    variable_name: AmfUe_Guti
+  - rw: read
+    variable_name: AmfUe_LadnInfo
+  - rw: read
+    variable_name: AmfUe_NetworkSlicingSubscriptionChanged
+  - rw: read
+    variable_name: AmfUe_T3512Value
+  - rw: read
+    variable_name: AmfUe_T3512ValueT3502Value
+  - rw: read
+    variable_name: AmfUe_UESpecificDRX
+  - rw: read
+    variable_name: RanUe_UeContextRequest
+  SendSecurityModeCommand:
+  - rw: read
+    variable_name: AmfUe_CipheringAlg
+  - rw: read
+    variable_name: AmfUe_IntegrityAlg
+  - rw: read
+    variable_name: AmfUe_NgKsi
+  - rw: read
+    variable_name: AmfUe_Pei
+  - rw: read
+    variable_name: AmfUe_RetransmissionOfInitialNASMsg
+  - rw: read
+    variable_name: AmfUe_RegistrationType5GS
+  - rw: read
+    variable_name: AmfUe_ABBA
+  UpdateSecurityContext:
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_Kamf
+  - rw: read
+    variable_name: AmfUe_Kamf
+  - rw: write
+    variable_name: AmfUe_NH
+  - rw: read
+    variable_name: AmfUe_ULCount
+  - rw: read
+    variable_name: AmfUe_Kamf
+  - rw: read
+    variable_name: AmfUe_Kamf
+  - rw: write
+    variable_name: AmfUe_NH
+  getSubscribedNssai:
+  - rw: read
+    variable_name: AmfUe_SdmSubscriptionId
+  - rw: read
+    variable_name: AmfUe_PlmnId
+  handleInitialUEMessageMain:
+  - rw: write
+    variable_name: RanUe_Location_NrLocation
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_Tac
+  - rw: write
+    variable_name: RanUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_UeLocationTimestamp
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  handleUplinkNASTransportMain:
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_Tac
+  - rw: write
+    variable_name: RanUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_UeLocationTimestamp
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  - rw: write
+    variable_name: AmfUe_LocationChanged
+  - rw: write
+    variable_name: AmfUe_Location
+  - rw: write
+    variable_name: AmfUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_Tac
+  - rw: write
+    variable_name: RanUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_UeLocationTimestamp
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  - rw: write
+    variable_name: AmfUe_LocationChanged
+  - rw: write
+    variable_name: AmfUe_Location
+  - rw: write
+    variable_name: AmfUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_Tac
+  - rw: write
+    variable_name: RanUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_UeLocationTimestamp
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  - rw: write
+    variable_name: AmfUe_LocationChanged
+  - rw: write
+    variable_name: AmfUe_Location
+  - rw: write
+    variable_name: AmfUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Tai_Tac
+  - rw: write
+    variable_name: RanUe_Tai
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_UeLocationTimestamp
+  - rw: write
+    variable_name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  - rw: write
+    variable_name: AmfUe_LocationChanged
+  - rw: write
+    variable_name: AmfUe_Location
+  - rw: write
+    variable_name: AmfUe_Tai
+  handlerInitialUEMessage:
+  - rw: write
+    variable_name: RanUe_RRCEstablishmentCause
+  - rw: write
+    variable_name: RanUe_InitialUEMessage
+category: stateful_action
+flow_state_variables:
+- name: AmfUe_ABBA
+  size: '24'
+- name: AmfUe_AccessAndMobilitySubscriptionData
+  size: '240'
+- name: AmfUe_AllowedNssai
+  size: '64'
+- name: AmfUe_AusfId
+  size: '16'
+- name: AmfUe_AusfUri
+  size: '16'
+- name: AmfUe_AuthFailureCauseSynchFailureTimes
+  size: '8'
+- name: AmfUe_AuthenticationCtx
+  size: '56'
+- name: AmfUe_AuthenticationCtx_Var5gAuthData
+  size: '16'
+- name: AmfUe_CipheringAlg
+  size: '1'
+- name: AmfUe_DLCount
+  size: '4'
+- name: AmfUe_EventSubscriptionsInfo
+  size: '72'
+- name: AmfUe_Gpsi
+  size: '16'
+- name: AmfUe_Guti
+  size: '16'
+- name: AmfUe_IdentityRequestSendTimes
+  size: '8'
+- name: AmfUe_IdentityTypeUsedForRegistration
+  size: '1'
+- name: AmfUe_IntegrityAlg
+  size: '1'
+- name: AmfUe_Kamf
+  size: '16'
+- name: AmfUe_Kgnb
+  size: '24'
+- name: AmfUe_KnasEnc
+  size: '16'
+- name: AmfUe_KnasInt
+  size: '16'
+- name: AmfUe_Kseaf
+  size: '16'
+- name: AmfUe_LadnInfo
+  size: '40'
+- name: AmfUe_Location
+  size: '24'
+- name: AmfUe_LocationChanged
+  size: '1'
+- name: AmfUe_MacFailed
+  size: '1'
+- name: AmfUe_N1N2MessageIDGenerator
+  size: '8'
+- name: AmfUe_N1N2MessageSubscribeIDGenerator
+  size: '8'
+- name: AmfUe_NCC
+  size: '1'
+- name: AmfUe_NH
+  size: '24'
+- name: AmfUe_NetworkSlicingSubscriptionChanged
+  size: '1'
+- name: AmfUe_NgKsi
+  size: '24'
+- name: AmfUe_NgKsi_Ksi
+  size: '4'
+- name: AmfUe_NgKsi_Tsc
+  size: '16'
+- name: AmfUe_NudmSDMUri
+  size: '16'
+- name: AmfUe_PcfUri
+  size: '16'
+- name: AmfUe_Pei
+  size: '16'
+- name: AmfUe_PlmnId
+  size: '32'
+- name: AmfUe_RanUe
+  size: '296'
+- name: AmfUe_RegistrationAcceptForNon3GPPAccess
+  size: '24'
+- name: AmfUe_RegistrationArea
+  size: '48'
+- name: AmfUe_RegistrationRequest
+  size: '8'
+- name: AmfUe_RegistrationType5GS
+  size: '1'
+- name: AmfUe_ReleaseCause
+  size: '48'
+- name: AmfUe_RetransmissionOfInitialNASMsg
+  size: '1'
+- name: AmfUe_SdmSubscriptionId
+  size: '16'
+- name: AmfUe_SecurityContextAvailable
+  size: '1'
+- name: AmfUe_ServingAmfChanged
+  size: '1'
+- name: AmfUe_State
+  size: '64'
+- name: AmfUe_State_models_AccessType_NON_3_GPP_ACCESS_
+  size: '8'
+- name: AmfUe_State_models_AccessType__3_GPP_ACCESS_
+  size: '8'
+- name: AmfUe_Suci
+  size: '16'
+- name: AmfUe_Supi
+  size: '16'
+- name: AmfUe_T3512Value
+  size: '8'
+- name: AmfUe_T3512ValueT3502Value
+  size: '8'
+- name: AmfUe_T3513
+  size: '8'
+- name: AmfUe_T3550
+  size: '24'
+- name: AmfUe_T3560
+  size: '24'
+- name: AmfUe_T3565
+  size: '8'
+- name: AmfUe_Tai
+  size: '24'
+- name: AmfUe_UESecurityCapability
+  size: '32'
+- name: AmfUe_UESpecificDRX
+  size: '1'
+- name: AmfUe_ULCount
+  size: '4'
+- name: AmfUe_UeCmRegistered
+  size: '25'
+- name: AmfUe_UnauthenticatedSupi
+  size: '1'
+- name: AmfUe_onGoing
+  size: '48'
+- name: AmfUe_onGoing_models_AccessType_NON_3_GPP_ACCESS_
+  size: '8'
+- name: AmfUe_onGoing_models_AccessType_NON_3_GPP_ACCESS__Procedure
+  size: '16'
+- name: AmfUe_onGoing_models_AccessType__3_GPP_ACCESS_
+  size: '8'
+- name: AmfUe_onGoing_models_AccessType__3_GPP_ACCESS__Procedure
+  size: '16'
+- name: AmfUe_servingAMF
+  size: '8'
+- name: RanUe_AmfUeNgapId
+  size: '8'
+- name: RanUe_InitialUEMessage
+  size: '24'
+- name: RanUe_Location_NrLocation
+  size: '72'
+- name: RanUe_Location_NrLocation_AgeOfLocationInformation
+  size: '4'
+- name: RanUe_Location_NrLocation_Ncgi_NrCellId
+  size: '16'
+- name: RanUe_Location_NrLocation_Ncgi_PlmnId
+  size: '8'
+- name: RanUe_Location_NrLocation_Tai
+  size: '24'
+- name: RanUe_Location_NrLocation_Tai_PlmnId
+  size: '8'
+- name: RanUe_Location_NrLocation_Tai_Tac
+  size: '16'
+- name: RanUe_Location_NrLocation_UeLocationTimestamp
+  size: '8'
+- name: RanUe_RRCEstablishmentCause
+  size: '16'
+- name: RanUe_RanUeNgapId
+  size: '8'
+- name: RanUe_Tai
+  size: '24'
+- name: RanUe_UeContextRequest
+  size: '1'
+transitions:
+- Start, packet -> dispatchMain
+- dispatchMain, E_handlerUplinkNASTransport_3_security_mode_complete -> handlerUplinkNASTransport
+- dispatchMain, E_handlerUplinkNASTransport_6_transport5GSMMessage -> handlerUplinkNASTransport
+- dispatchMain, E_handlerPDUSessionResourceSetupResponse_7_pdu_session_resource_setup_response -> handlerPDUSessionResourceSetupResponse
+- dispatchMain, E_handlerInitialUEMessage_1_initialue -> handlerInitialUEMessage
+- dispatchMain, E_handlerUplinkNASTransport_2_authentication_response -> handlerUplinkNASTransport
+- dispatchMain, E_handlerInitialContextSetupResponse_4_initial_context_response -> handlerInitialContextSetupResponse
+- dispatchMain, E_handlerUplinkNASTransport_5_registration_complete -> handlerUplinkNASTransport
+- handlerUplinkNASTransport, E_ranUeFind_3_security_mode_complete -> ranUeFind
+- handlerUplinkNASTransport, E_ranUeFind_6_transport5GSMMessage -> ranUeFind
+- handlerUplinkNASTransport, E_ranUeFind_2_authentication_response -> ranUeFind
+- handlerUplinkNASTransport, E_ranUeFind_5_registration_complete -> ranUeFind
+- ranUeFind, E_RanUeFindByAmfUeNgapID_3_security_mode_complete -> RanUeFindByAmfUeNgapID
+- ranUeFind, E_RanUeFindByAmfUeNgapID_6_transport5GSMMessage -> RanUeFindByAmfUeNgapID
+- ranUeFind, E_RanUeFindByAmfUeNgapID_7_pdu_session_resource_setup_response -> RanUeFindByAmfUeNgapID
+- ranUeFind, E_RanUeFindByAmfUeNgapID_2_authentication_response -> RanUeFindByAmfUeNgapID
+- ranUeFind, E_RanUeFindByAmfUeNgapID_4_initial_context_response -> RanUeFindByAmfUeNgapID
+- ranUeFind, E_RanUeFindByAmfUeNgapID_5_registration_complete -> RanUeFindByAmfUeNgapID
+- RanUeFindByAmfUeNgapID, E_handleUplinkNASTransportMain_3_security_mode_complete -> handleUplinkNASTransportMain
+- RanUeFindByAmfUeNgapID, E_handleUplinkNASTransportMain_6_transport5GSMMessage -> handleUplinkNASTransportMain
+- RanUeFindByAmfUeNgapID, E_handlePDUSessionResourceSetupResponseMain_7_pdu_session_resource_setup_response -> handlePDUSessionResourceSetupResponseMain
+- RanUeFindByAmfUeNgapID, E_handleUplinkNASTransportMain_2_authentication_response -> handleUplinkNASTransportMain
+- RanUeFindByAmfUeNgapID, E_handleInitialContextSetupResponseMain_4_initial_context_response -> handleInitialContextSetupResponseMain
+- RanUeFindByAmfUeNgapID, E_handleUplinkNASTransportMain_5_registration_complete -> handleUplinkNASTransportMain
+- handleUplinkNASTransportMain, E_UpdateLocation_3_security_mode_complete -> UpdateLocation
+- handleUplinkNASTransportMain, E_UpdateLocation_6_transport5GSMMessage -> UpdateLocation
+- handleUplinkNASTransportMain, E_UpdateLocation_2_authentication_response -> UpdateLocation
+- handleUplinkNASTransportMain, E_UpdateLocation_5_registration_complete -> UpdateLocation
+- UpdateLocation, E_HandleNAS_3_security_mode_complete -> HandleNAS
+- UpdateLocation, E_HandleNAS_6_transport5GSMMessage -> HandleNAS
+- UpdateLocation, E_HandleNAS_1_initialue -> HandleNAS
+- UpdateLocation, E_HandleNAS_2_authentication_response -> HandleNAS
+- UpdateLocation, E_HandleNAS_5_registration_complete -> HandleNAS
+- HandleNAS, E_Decode_3_security_mode_complete -> Decode
+- HandleNAS, E_Decode_6_transport5GSMMessage -> Decode
+- HandleNAS, E_NewAmfUe_1_initialue -> NewAmfUe
+- HandleNAS, E_Decode_2_authentication_response -> Decode
+- HandleNAS, E_Decode_5_registration_complete -> Decode
+- Decode, E_Dispatch_3_security_mode_complete -> Dispatch
+- Decode, E_Dispatch_6_transport5GSMMessage -> Dispatch
+- Decode, E_DeRegistered_1_initialue -> DeRegistered
+- Decode, E_Dispatch_2_authentication_response -> Dispatch
+- Decode, E_GetBearerType_5_registration_complete -> GetBearerType
+- Dispatch, E_SecurityMode_3_security_mode_complete -> SecurityMode
+- Dispatch, E_Registered_6_transport5GSMMessage -> Registered
+- Dispatch, E_Authentication_2_authentication_response -> Authentication
+- Dispatch, E_ContextSetup_5_registration_complete -> ContextSetup
+- SecurityMode, E_HandleSecurityModeComplete_3_security_mode_complete -> HandleSecurityModeComplete
+- SecurityMode, E_SecurityContextIsValid_2_authentication_response -> SecurityContextIsValid
+- HandleSecurityModeComplete, E_StopT3560_3_security_mode_complete -> StopT3560
+- StopT3560, E_Stop_3_security_mode_complete -> Stop
+- StopT3560, E_Stop_2_authentication_response -> Stop
+- Stop, E_SecurityContextIsValid_3_security_mode_complete -> SecurityContextIsValid
+- Stop, E_SendAuth5gAkaConfirmRequest_2_authentication_response -> SendAuth5gAkaConfirmRequest
+- Stop, E_Registered_5_registration_complete -> Registered
+- SecurityContextIsValid, E_UpdateSecurityContext_3_security_mode_complete -> UpdateSecurityContext
+- SecurityContextIsValid, E_SendUEAuthenticationAuthenticateRequest_1_initialue -> SendUEAuthenticationAuthenticateRequest
+- SecurityContextIsValid, E_SelectSecurityAlg_2_authentication_response -> SelectSecurityAlg
+- UpdateSecurityContext, E_DerivateAnKey_3_security_mode_complete -> DerivateAnKey
+- DerivateAnKey, E_DerivateNH_3_security_mode_complete -> DerivateNH
+- DerivateNH, E_ContextSetup_3_security_mode_complete -> ContextSetup
+- ContextSetup, E_HandleInitialRegistration_3_security_mode_complete -> HandleInitialRegistration
+- ContextSetup, E_HandleRegistrationComplete_5_registration_complete -> HandleRegistrationComplete
+- HandleInitialRegistration, E_getSubscribedNssai_3_security_mode_complete -> getSubscribedNssai
+- getSubscribedNssai, E_SearchUdmSdmInstance_3_security_mode_complete -> SearchUdmSdmInstance
+- SearchUdmSdmInstance, E_SDMGetSliceSelectionSubscriptionData_3_security_mode_complete -> SDMGetSliceSelectionSubscriptionData
+- SDMGetSliceSelectionSubscriptionData, E_handleRequestedNssai_3_security_mode_complete -> handleRequestedNssai
+- handleRequestedNssai, E_InSubscribedNssai_3_security_mode_complete -> InSubscribedNssai
+- InSubscribedNssai, E_InAllowedNssai_3_security_mode_complete -> InAllowedNssai
+- InAllowedNssai, E_storeLastVisitedRegisteredTAI_3_security_mode_complete -> storeLastVisitedRegisteredTAI
+- storeLastVisitedRegisteredTAI, E_negotiateDRXParameters_3_security_mode_complete -> negotiateDRXParameters
+- negotiateDRXParameters, E_communicateWithUDM_3_security_mode_complete -> communicateWithUDM
+- communicateWithUDM, E_SendSearchNFInstances_3_security_mode_complete -> SendSearchNFInstances
+- SendSearchNFInstances, E_UeCmRegistration_3_security_mode_complete -> UeCmRegistration
+- UeCmRegistration, E_SDMGetAmData_3_security_mode_complete -> SDMGetAmData
+- SDMGetAmData, E_SDMGetSmfSelectData_3_security_mode_complete -> SDMGetSmfSelectData
+- SDMGetSmfSelectData, E_SDMGetUeContextInSmfData_3_security_mode_complete -> SDMGetUeContextInSmfData
+- SDMGetUeContextInSmfData, E_SDMSubscribe_3_security_mode_complete -> SDMSubscribe
+- SDMSubscribe, E_AMPolicyControlCreate_3_security_mode_complete -> AMPolicyControlCreate
+- AMPolicyControlCreate, E_GetIPv4Uri_3_security_mode_complete -> GetIPv4Uri
+- GetIPv4Uri, E_HTTPAMFStatusChangeSubscribe_3_security_mode_complete -> HTTPAMFStatusChangeSubscribe
+- GetIPv4Uri, E_SmfUri_6_transport5GSMMessage -> SmfUri
+- HTTPAMFStatusChangeSubscribe, E_HandleAMFStatusChangeSubscribeRequest_3_security_mode_complete -> HandleAMFStatusChangeSubscribeRequest
+- HandleAMFStatusChangeSubscribeRequest, E_AMFStatusChangeSubscribeProcedure_3_security_mode_complete -> AMFStatusChangeSubscribeProcedure
+- AMFStatusChangeSubscribeProcedure, E_NewAMFStatusSubscription_3_security_mode_complete -> NewAMFStatusSubscription
+- NewAMFStatusSubscription, E_AllocateRegistrationArea_3_security_mode_complete -> AllocateRegistrationArea
+- AllocateRegistrationArea, E_assignLadnInfo_3_security_mode_complete -> assignLadnInfo
+- assignLadnInfo, E_AddAmfUeToUePool_3_security_mode_complete -> AddAmfUeToUePool
+- AddAmfUeToUePool, E_SendRegistrationAccept_3_security_mode_complete -> SendRegistrationAccept
+- SendRegistrationAccept, E_BuildRegistrationAccept_3_security_mode_complete -> BuildRegistrationAccept
+- BuildRegistrationAccept, E_includeConfiguredNssaiCheck_3_security_mode_complete -> includeConfiguredNssaiCheck
+- includeConfiguredNssaiCheck, E_GetNasIENetworkFeatureSupport5GS_3_security_mode_complete -> GetNasIENetworkFeatureSupport5GS
+- GetNasIENetworkFeatureSupport5GS, E_Encode_3_security_mode_complete -> Encode
+- Encode, E_GetBearerType_3_security_mode_complete -> GetBearerType
+- Encode, E_GetBearerType_2_authentication_response -> GetBearerType
+- GetBearerType, E_SendN2Message_3_security_mode_complete -> SendN2Message
+- GetBearerType, E_SendDownlinkNasTransport_2_authentication_response -> SendDownlinkNasTransport
+- GetBearerType, E_Dispatch_5_registration_complete -> Dispatch
+- SendN2Message, E_SendInitialContextSetupRequest_3_security_mode_complete -> SendInitialContextSetupRequest
+- SendInitialContextSetupRequest, E_BuildInitialContextSetupRequest_3_security_mode_complete -> BuildInitialContextSetupRequest
+- BuildInitialContextSetupRequest, E_GetNgapIEMobilityRestrictionList_3_security_mode_complete -> GetNgapIEMobilityRestrictionList
+- GetNgapIEMobilityRestrictionList, E_BuildIEMobilityRestrictionList_3_security_mode_complete -> BuildIEMobilityRestrictionList
+- GetNgapIEMobilityRestrictionList, E_SendToRanUe_1_initialue -> SendToRanUe
+- GetNgapIEMobilityRestrictionList, E_SendToRanUe_2_authentication_response -> SendToRanUe
+- BuildIEMobilityRestrictionList, E_GetNgapIEMaskedIMEISV_3_security_mode_complete -> GetNgapIEMaskedIMEISV
+- GetNgapIEMaskedIMEISV, E_GetNgapIERedirectionVoiceFallback_3_security_mode_complete -> GetNgapIERedirectionVoiceFallback
+- GetNgapIERedirectionVoiceFallback, E_NasSendToRan_3_security_mode_complete -> NasSendToRan
+- NasSendToRan, E_SendToRanUe_3_security_mode_complete -> SendToRanUe
+- SendToRanUe, E_SendToRan_3_security_mode_complete -> SendToRan
+- SendToRanUe, E_SendToRan_1_initialue -> SendToRan
+- SendToRanUe, E_SendToRan_2_authentication_response -> SendToRan
+- SendToRan, E_NewTimer_3_security_mode_complete -> NewTimer
+- SendToRan, E_NewTimer_1_initialue -> NewTimer
+- SendToRan, E_NewTimer_2_authentication_response -> NewTimer
+- NewTimer, packet -> End
+- NewTimer, packet -> End
+- NewTimer, packet -> End
+- Registered, E_HandleULNASTransport_6_transport5GSMMessage -> HandleULNASTransport
+- Registered, E_ClearRegistrationRequestData_5_registration_complete -> ClearRegistrationRequestData
+- HandleULNASTransport, E_transport5GSMMessage_6_transport5GSMMessage -> transport5GSMMessage
+- transport5GSMMessage, E_SmContextFindByPDUSessionID_6_transport5GSMMessage -> SmContextFindByPDUSessionID
+- SmContextFindByPDUSessionID, E_CreatePDUSession_6_transport5GSMMessage -> CreatePDUSession
+- SmContextFindByPDUSessionID, E_SendUpdateSmContextN2Info_7_pdu_session_resource_setup_response -> SendUpdateSmContextN2Info
+- CreatePDUSession, E_SelectSmf_6_transport5GSMMessage -> SelectSmf
+- SelectSmf, E_ServingAMF_6_transport5GSMMessage -> ServingAMF
+- ServingAMF, E_GetNsiInformationFromSnssai_6_transport5GSMMessage -> GetNsiInformationFromSnssai
+- GetNsiInformationFromSnssai, E_SearchNssfNSSelectionInstance_6_transport5GSMMessage -> SearchNssfNSSelectionInstance
+- SearchNssfNSSelectionInstance, E_NSSelectionGetForPduSession_6_transport5GSMMessage -> NSSelectionGetForPduSession
+- NSSelectionGetForPduSession, E_NewSmContext_6_transport5GSMMessage -> NewSmContext
+- NewSmContext, E_SetSnssai_6_transport5GSMMessage -> SetSnssai
+- SetSnssai, E_SetDnn_6_transport5GSMMessage -> SetDnn
+- SetDnn, E_SetAccessType_6_transport5GSMMessage -> SetAccessType
+- SetAccessType, E_SetNsInstance_6_transport5GSMMessage -> SetNsInstance
+- SetNsInstance, E_SetSmfID_6_transport5GSMMessage -> SetSmfID
+- SetSmfID, E_SetSmfUri_6_transport5GSMMessage -> SetSmfUri
+- SetSmfUri, E_SendCreateSmContextRequest_6_transport5GSMMessage -> SendCreateSmContextRequest
+- SendCreateSmContextRequest, E_buildCreateSmContextRequest_6_transport5GSMMessage -> buildCreateSmContextRequest
+- buildCreateSmContextRequest, E_PduSessionID_6_transport5GSMMessage -> PduSessionID
+- PduSessionID, E_Snssai_6_transport5GSMMessage -> Snssai
+- Snssai, E_Dnn_6_transport5GSMMessage -> Dnn
+- Dnn, E_AccessType_6_transport5GSMMessage -> AccessType
+- AccessType, E_GetIPv4Uri_6_transport5GSMMessage -> GetIPv4Uri
+- SmfUri, E_SetSmContextRef_6_transport5GSMMessage -> SetSmContextRef
+- SmfUri, E_SmContextRef_7_pdu_session_resource_setup_response -> SmContextRef
+- SetSmContextRef, E_SetUserLocation_6_transport5GSMMessage -> SetUserLocation
+- SetUserLocation, E_StoreSmContext_6_transport5GSMMessage -> StoreSmContext
+- StoreSmContext, packet -> End
+- handlerPDUSessionResourceSetupResponse, E_ranUeFind_7_pdu_session_resource_setup_response -> ranUeFind
+- handlePDUSessionResourceSetupResponseMain, E_SmContextFindByPDUSessionID_7_pdu_session_resource_setup_response -> SmContextFindByPDUSessionID
+- SendUpdateSmContextN2Info, E_SendUpdateSmContextRequest_7_pdu_session_resource_setup_response -> SendUpdateSmContextRequest
+- SendUpdateSmContextRequest, E_SmfUri_7_pdu_session_resource_setup_response -> SmfUri
+- SmContextRef, packet -> End
+- handlerInitialUEMessage, E_handleInitialUEMessageMain_1_initialue -> handleInitialUEMessageMain
+- handleInitialUEMessageMain, E_RanUeFindByRanUeNgapID_1_initialue -> RanUeFindByRanUeNgapID
+- RanUeFindByRanUeNgapID, E_NewRanUe_1_initialue -> NewRanUe
+- NewRanUe, E_UpdateLocation_1_initialue -> UpdateLocation
+- NewAmfUe, E_init_1_initialue -> init
+- init, E_AllocateGutiToUe_1_initialue -> AllocateGutiToUe
+- AllocateGutiToUe, E_TmsiAllocate_1_initialue -> TmsiAllocate
+- TmsiAllocate, E_AttachRanUeToAmfUeAndReleaseOldIfAny_1_initialue -> AttachRanUeToAmfUeAndReleaseOldIfAny
+- AttachRanUeToAmfUeAndReleaseOldIfAny, E_AttachRanUe_1_initialue -> AttachRanUe
+- AttachRanUe, E_Decode_1_initialue -> Decode
+- DeRegistered, E_HandleRegistrationRequest_1_initialue -> HandleRegistrationRequest
+- HandleRegistrationRequest, E_SetOnGoing_1_initialue -> SetOnGoing
+- SetOnGoing, E_StopT3513_1_initialue -> StopT3513
+- StopT3513, E_StopT3565_1_initialue -> StopT3565
+- StopT3565, E_PlmnIdStringToModels_1_initialue -> PlmnIdStringToModels
+- PlmnIdStringToModels, E_InTaiList_1_initialue -> InTaiList
+- InTaiList, E_Authentication_1_initialue -> Authentication
+- Authentication, E_AuthenticationProcedure_1_initialue -> AuthenticationProcedure
+- Authentication, E_HandleAuthenticationResponse_2_authentication_response -> HandleAuthenticationResponse
+- AuthenticationProcedure, E_IdentityVerification_1_initialue -> IdentityVerification
+- IdentityVerification, E_SecurityContextIsValid_1_initialue -> SecurityContextIsValid
+- SendUEAuthenticationAuthenticateRequest, E_SendAuthenticationRequest_1_initialue -> SendAuthenticationRequest
+- SendAuthenticationRequest, E_BuildAuthenticationRequest_1_initialue -> BuildAuthenticationRequest
+- BuildAuthenticationRequest, E_SendDownlinkNasTransport_1_initialue -> SendDownlinkNasTransport
+- SendDownlinkNasTransport, E_BuildDownlinkNasTransport_1_initialue -> BuildDownlinkNasTransport
+- SendDownlinkNasTransport, E_BuildDownlinkNasTransport_2_authentication_response -> BuildDownlinkNasTransport
+- BuildDownlinkNasTransport, E_GetNgapIEMobilityRestrictionList_1_initialue -> GetNgapIEMobilityRestrictionList
+- BuildDownlinkNasTransport, E_GetNgapIEMobilityRestrictionList_2_authentication_response -> GetNgapIEMobilityRestrictionList
+- HandleAuthenticationResponse, E_StopT3560_2_authentication_response -> StopT3560
+- SendAuth5gAkaConfirmRequest, E_DerivateKamf_2_authentication_response -> DerivateKamf
+- DerivateKamf, E_SecurityMode_2_authentication_response -> SecurityMode
+- SelectSecurityAlg, E_DerivateAlgKey_2_authentication_response -> DerivateAlgKey
+- DerivateAlgKey, E_SendSecurityModeCommand_2_authentication_response -> SendSecurityModeCommand
+- SendSecurityModeCommand, E_BuildSecurityModeCommand_2_authentication_response -> BuildSecurityModeCommand
+- BuildSecurityModeCommand, E_Encode_2_authentication_response -> Encode
+- handlerInitialContextSetupResponse, E_ranUeFind_4_initial_context_response -> ranUeFind
+- handleInitialContextSetupResponseMain, packet -> End
+- HandleRegistrationComplete, E_StopT3550_5_registration_complete -> StopT3550
+- StopT3550, E_Stop_5_registration_complete -> Stop
+- ClearRegistrationRequestData, packet -> End

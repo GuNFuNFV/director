@@ -1,0 +1,59 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cycles'
+# Event count (approx.): 5612320227
+#
+# Overhead  Command       Shared Object                Symbol                            
+# ........  ............  ...........................  ..................................
+#
+    34.71%  rte-worker-2  nflr                         [.] worker_fsm_amac_thread
+    16.01%  rte-worker-2  nflr                         [.] interval_tree_compare
+    15.11%  rte-worker-2  libc-2.31.so                 [.] __memcmp_avx2_movbe
+    12.93%  rte-worker-2  nflr                         [.] interval_tree_load_key
+     4.75%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_decompress_v
+     3.09%  rte-worker-2  nflr                         [.] cuckoo_hash_first_test
+     2.79%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_handle_completion
+     2.60%  rte-worker-2  nflr                         [.] cuckoo_hash_first_hash
+     2.19%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_rx_burst_vec
+     1.50%  rte-worker-2  nflr                         [.] send_packet
+     1.44%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_burst_none_empw
+     0.94%  rte-worker-2  nflr                         [.] cuckoo_hash_get_key
+     0.69%  rte-worker-2  nflr                         [.] upf_encapsulate
+     0.36%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_process_v
+     0.32%  rte-worker-2  nflr                         [.] interval_tree_get_key
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] perf_event_task_tick
+     0.06%  rte-worker-2  [kernel.kallsyms]            [k] update_curr
+     0.03%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mc_dequeue
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] native_write_msr
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] __hrtimer_run_queues
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] timerqueue_add
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] irqentry_exit_to_user_mode
+     0.03%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mp_enqueue
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] tick_program_event
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] rcu_segcblist_ready_cbs
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] sync_regs
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock_irqsave
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __softirqentry_text_start
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __acct_update_integrals
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] rcu_sched_clock_irq
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] timekeeping_advance
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] update_min_vruntime
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] hrtimer_run_queues
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] run_posix_cpu_timers
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] x86_pmu_disable
+     0.02%  rte-worker-2  nflr                         [.] cuckoo_hash_second_test
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] task_tick_fair
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __irqentry_text_end
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] hrtimer_update_next_event
+     0.00%  perf          [kernel.kallsyms]            [k] entry_SYSCALL_64_after_hwframe
+     0.00%  perf          [kernel.kallsyms]            [k] native_flush_tlb_one_user
+     0.00%  perf          [kernel.kallsyms]            [k] native_apic_mem_write
+     0.00%  perf          [kernel.kallsyms]            [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

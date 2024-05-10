@@ -1,0 +1,6 @@
+dynamic_configuration_list: []
+name: interval_tree
+options:
+- name: interval_tree_depth
+- name: interval_tree_dimension
+static_configuration_list: []

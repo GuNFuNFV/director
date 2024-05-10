@@ -1,0 +1,71 @@
+global_options:
+  machine_ip: None
+  num_possible_interleaved_threads: None
+  destination_instance: None
+  flow_id_lower: None
+  flow_id_upper: None
+  packet_size: None
+  proportion: None
+  subflow_id_lower: None
+  subflow_id_upper: None
+template_options:
+  Machine1_Traffic2_Worker1$template.yaml:
+    options:
+      machine_ip: None
+      num_possible_interleaved_threads: None
+      destination_instance: None
+      flow_id_lower: None
+      flow_id_upper: None
+      packet_size: None
+      proportion: None
+      subflow_id_lower: None
+      subflow_id_upper: None
+    all_options:
+    - name: destination_instance
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: destination_instance
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: flow_id_lower
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: flow_id_lower
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: flow_id_upper
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: flow_id_upper
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: machine_ip
+      path: root/machine#0/
+      value: None
+    - name: num_possible_interleaved_threads
+      path: root/machine#0/worker#0/
+      value: None
+    - name: packet_size
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: packet_size
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: proportion
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: proportion
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: subflow_id_lower
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#0/
+      value: None
+    - name: subflow_id_upper
+      path: root/machine#0/worker#0/traffic_generator#0/traffic_class#1/
+      value: None

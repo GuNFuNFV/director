@@ -1,0 +1,4 @@
+category: system
+transitions:
+  - Start, packet.match_fail -> Self
+  - Start, packet -> End

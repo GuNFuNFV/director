@@ -1,0 +1,141 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cycles'
+# Event count (approx.): 547344964
+#
+# Overhead  Command       Shared Object                Symbol                                    
+# ........  ............  ...........................  ..........................................
+#
+     7.06%  rte-worker-2  [kernel.kallsyms]            [k] syscall_exit_to_user_mode
+     6.80%  rte-worker-2  [kernel.kallsyms]            [k] syscall_return_via_sysret
+     5.39%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock_irqsave
+     4.81%  rte-worker-2  [kernel.kallsyms]            [k] __queue_work
+     4.76%  rte-worker-2  [kernel.kallsyms]            [k] entry_SYSCALL_64_after_hwframe
+     4.74%  rte-worker-2  [kernel.kallsyms]            [k] try_to_wake_up
+     4.51%  rte-worker-2  [kernel.kallsyms]            [k] queue_work_on
+     4.28%  rte-worker-2  [kernel.kallsyms]            [k] insert_work
+     4.16%  rte-worker-2  [kernel.kallsyms]            [k] n_tty_write
+     3.93%  rte-worker-2  [kernel.kallsyms]            [k] ttwu_queue_wakelist
+     3.77%  rte-worker-2  [kernel.kallsyms]            [k] __entry_text_start
+     3.64%  rte-worker-2  [kernel.kallsyms]            [k] send_call_function_single_ipi
+     2.79%  rte-worker-2  [kernel.kallsyms]            [k] available_idle_cpu
+     2.37%  rte-worker-2  [kernel.kallsyms]            [k] llist_add_batch
+     2.07%  rte-worker-2  libc-2.31.so                 [.] __vfprintf_internal
+     1.91%  rte-worker-2  [kernel.kallsyms]            [k] tty_buffer_space_avail
+     1.44%  rte-worker-2  [kernel.kallsyms]            [k] pty_write
+     1.36%  rte-worker-2  [kernel.kallsyms]            [k] __fget_light
+     1.26%  rte-worker-2  [kernel.kallsyms]            [k] mutex_unlock
+     1.19%  rte-worker-2  [kernel.kallsyms]            [k] tty_insert_flip_string_fixed_flag
+     0.94%  rte-worker-2  [kernel.kallsyms]            [k] tty_insert_flip_string_and_push_buffer
+     0.89%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock
+     0.89%  rte-worker-2  [kernel.kallsyms]            [k] vfs_write
+     0.88%  rte-worker-2  [kernel.kallsyms]            [k] do_syscall_64
+     0.85%  rte-worker-2  [kernel.kallsyms]            [k] pty_write_room
+     0.71%  rte-worker-2  [kernel.kallsyms]            [k] __check_heap_object
+     0.69%  rte-worker-2  [kernel.kallsyms]            [k] memcpy_erms
+     0.67%  rte-worker-2  libc-2.31.so                 [.] __GI___libc_write
+     0.67%  rte-worker-2  [kernel.kallsyms]            [k] __check_object_size
+     0.62%  swapper       [kernel.kallsyms]            [k] acpi_processor_ffh_cstate_enter
+     0.59%  rte-worker-2  libc-2.31.so                 [.] _IO_file_write@@GLIBC_2.2.5
+     0.59%  rte-worker-2  [kernel.kallsyms]            [k] process_echoes
+     0.59%  rte-worker-2  [kernel.kallsyms]            [k] file_tty_write.isra.0
+     0.58%  rte-worker-2  [kernel.kallsyms]            [k] mutex_lock
+     0.57%  rte-worker-2  [kernel.kallsyms]            [k] new_sync_write
+     0.57%  rte-worker-2  [kernel.kallsyms]            [k] llist_del_first
+     0.55%  rte-worker-2  [kernel.kallsyms]            [k] entry_SYSCALL_64_safe_stack
+     0.54%  rte-worker-2  [kernel.kallsyms]            [k] copy_user_generic_unrolled
+     0.50%  rte-worker-2  libc-2.31.so                 [.] __libc_disable_asynccancel
+     0.49%  rte-worker-2  [kernel.kallsyms]            [k] common_file_perm
+     0.48%  rte-worker-2  libc-2.31.so                 [.] _IO_file_xsputn@@GLIBC_2.2.5
+     0.47%  rte-worker-2  [kernel.kallsyms]            [k] fput_many
+     0.46%  rte-worker-2  [kernel.kallsyms]            [k] exit_to_user_mode_prepare
+     0.42%  rte-worker-2  nflr                         [.] cuckoo_hash_rtc
+     0.41%  rte-worker-2  libc-2.31.so                 [.] _itoa_word
+     0.40%  rte-worker-2  [kernel.kallsyms]            [k] __x64_sys_write
+     0.39%  rte-worker-2  [kernel.kallsyms]            [k] __virt_addr_valid
+     0.39%  rte-worker-2  [kernel.kallsyms]            [k] ldsem_down_read
+     0.39%  rte-worker-2  [kernel.kallsyms]            [k] ldsem_up_read
+     0.37%  rte-worker-2  [kernel.kallsyms]            [k] tty_write_room
+     0.31%  rte-worker-2  libc-2.31.so                 [.] __libc_enable_asynccancel
+     0.31%  rte-worker-2  [kernel.kallsyms]            [k] copy_user_enhanced_fast_string
+     0.30%  rte-worker-2  [kernel.kallsyms]            [k] mutex_trylock
+     0.30%  rte-worker-2  [kernel.kallsyms]            [k] aa_label_is_subset
+     0.30%  rte-worker-2  libc-2.31.so                 [.] __strchrnul_avx2
+     0.29%  rte-worker-2  nflr                         [.] interval_tree_rtc
+     0.28%  rte-worker-2  libc-2.31.so                 [.] __printf_chk
+     0.28%  rte-worker-2  [kernel.kallsyms]            [k] __lock_text_start
+     0.28%  rte-worker-2  [kernel.kallsyms]            [k] security_file_permission
+     0.26%  rte-worker-2  [kernel.kallsyms]            [k] __tty_buffer_request_room
+     0.22%  rte-worker-2  [kernel.kallsyms]            [k] select_task_rq_fair
+     0.21%  rte-worker-2  nflr                         [.] rte_pktmbuf_free
+     0.20%  rte-worker-2  libc-2.31.so                 [.] _IO_do_write@@GLIBC_2.2.5
+     0.20%  rte-worker-2  [kernel.kallsyms]            [k] __wake_up_common
+     0.20%  rte-worker-2  [kernel.kallsyms]            [k] remove_wait_queue
+     0.20%  rte-worker-2  [kernel.kallsyms]            [k] ksys_write
+     0.19%  rte-worker-2  libc-2.31.so                 [.] 0x00000000000225a4
+     0.19%  rte-worker-2  [kernel.kallsyms]            [k] up_read
+     0.19%  rte-worker-2  [kernel.kallsyms]            [k] tty_write
+     0.19%  rte-worker-2  [kernel.kallsyms]            [k] do_output_char
+     0.19%  rte-worker-2  [kernel.kallsyms]            [k] aa_file_perm
+     0.18%  rte-worker-2  [kernel.kallsyms]            [k] wait_woken
+     0.18%  swapper       [kernel.kallsyms]            [k] psi_group_change
+     0.12%  rte-worker-2  [kernel.kallsyms]            [k] mark_wake_futex
+     0.11%  rte-worker-2  [kernel.kallsyms]            [k] update_curr
+     0.11%  rte-worker-2  [kernel.kallsyms]            [k] timekeeping_update
+     0.11%  rte-worker-2  [kernel.kallsyms]            [k] tty_ldisc_ref_wait
+     0.11%  rte-worker-2  libpthread-2.31.so           [.] _pthread_cleanup_push_defer
+     0.11%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mc_dequeue
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] perf_event_task_tick
+     0.10%  swapper       [kernel.kallsyms]            [k] native_sched_clock
+     0.10%  rte-worker-2  nflr                         [.] worker_fsm_amac_thread
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] copyin
+     0.10%  swapper       [kernel.kallsyms]            [k] _raw_spin_lock_irqsave
+     0.10%  swapper       [kernel.kallsyms]            [k] timekeeping_advance
+     0.10%  swapper       [kernel.kallsyms]            [k] __schedule
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] _find_first_bit
+     0.10%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_rx_burst_vec
+     0.10%  swapper       [kernel.kallsyms]            [k] perf_event_task_tick
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] __wake_up_common_lock
+     0.10%  rte-worker-2  libc-2.31.so                 [.] __memcmp_avx2_movbe
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] get_work_pool
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] update_process_times
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] __radix_tree_lookup
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] update_blocked_averages
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] _copy_from_iter
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] tty_paranoia_check
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] rw_verify_area
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] rcu_all_qs
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] iov_iter_init
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] fpregs_assert_state_consistent
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] kthread_is_per_cpu
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] add_wait_queue
+     0.10%  swapper       [kernel.kallsyms]            [k] tick_do_update_jiffies64
+     0.10%  perf          perf                         [.] evlist__cpu_begin
+     0.10%  rte-worker-2  [kernel.kallsyms]            [k] ktime_get
+     0.09%  rte-worker-2  libc-2.31.so                 [.] __memmove_avx_unaligned_erms
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] syscall_enter_from_user_mode
+     0.09%  swapper       [kernel.kallsyms]            [k] task_tick_idle
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] native_sched_clock
+     0.09%  swapper       [kernel.kallsyms]            [k] sysvec_apic_timer_interrupt
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] native_queued_spin_lock_slowpath
+     0.09%  swapper       [kernel.kallsyms]            [k] update_curr
+     0.09%  swapper       [kernel.kallsyms]            [k] __switch_to_asm
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] down_read
+     0.09%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_decompress_v
+     0.09%  rte-worker-2  [kernel.kallsyms]            [k] __cond_resched
+     0.08%  swapper       [kernel.kallsyms]            [k] read_tsc
+     0.08%  swapper       [kernel.kallsyms]            [k] enqueue_entity
+     0.08%  rte-worker-2  [kernel.kallsyms]            [k] tty_ldisc_deref
+     0.08%  swapper       [kernel.kallsyms]            [k] scheduler_tick
+     0.06%  perf          [kernel.kallsyms]            [k] check_same_owner
+     0.00%  perf          [kernel.kallsyms]            [k] __set_pte_vaddr
+     0.00%  perf          [kernel.kallsyms]            [k] native_sched_clock
+     0.00%  perf          [kernel.kallsyms]            [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

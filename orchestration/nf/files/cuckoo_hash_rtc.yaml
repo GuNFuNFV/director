@@ -1,0 +1,9 @@
+category: stateful_match
+parameters:
+    - cuckoo_hash_entry_num
+    - cuckoo_hash_key_size
+    - cuckoo_hash_header_type
+transitions:
+  - Start , packet -> Self
+  - Self, packet.cuckoo_hash_test_success -> End
+  - Self, packet.match_fail -> End

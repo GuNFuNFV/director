@@ -1,0 +1,15 @@
+global_options:
+  machine_ip: None
+  num_possible_interleaved_threads: None
+template_options:
+  Machine1_Traffic1_Worker1$passthrough_testing.yaml:
+    options:
+      machine_ip: None
+      num_possible_interleaved_threads: None
+    all_options:
+    - name: machine_ip
+      path: root/machine#0/
+      value: None
+    - name: num_possible_interleaved_threads
+      path: root/machine#0/worker#0/
+      value: None

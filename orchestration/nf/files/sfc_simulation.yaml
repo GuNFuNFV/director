@@ -1,0 +1,21 @@
+category: stateful_action
+parameters:
+  - generic_access_mode
+  - generic_access_size
+flow_state_variables:
+  - name: generic_state_variable
+    size: 512 # 512/64= 8 cache lines
+transitions:
+  - Start , packet -> prefetch_action # simulate the prefetching action in the runtime
+  - prefetch_action, packet -> first_action
+  - first_action, second_action -> second_action
+  - first_action, packet -> End
+  - second_action, third_action -> third_action
+  - second_action, packet -> End
+  - third_action, fourth_action -> fourth_action
+  - third_action, packet -> End
+  - fourth_action, fifth_action -> fifth_action
+  - fourth_action, packet -> End
+  - fifth_action, sixth_action -> sixth_action
+  - fifth_action, packet -> End
+  - sixth_action, packet -> End

@@ -1,0 +1,10 @@
+category: stateful_match
+parameters:
+    - interval_tree_depth
+    - interval_tree_dimension
+transitions:
+    - Start, packet -> interval_tree_get_key
+    - interval_tree_get_key, packet.interval_tree_get_key_done -> interval_tree_load_key
+    - interval_tree_load_key, packet.interval_tree_load_key_done -> interval_tree_compare
+    - interval_tree_compare, packet.interval_tree_compare_success -> End
+    - interval_tree_compare, packet.interval_tree_compare_failure -> interval_tree_compare

@@ -1,0 +1,7 @@
+category: stateful_match
+parameters:
+    - interval_tree_depth
+    - interval_tree_dimension
+transitions:
+  - Start , packet -> Self
+  - Self, packet.interval_tree_compare_success -> End

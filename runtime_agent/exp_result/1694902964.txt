@@ -1,0 +1,62 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cycles'
+# Event count (approx.): 5613437041
+#
+# Overhead  Command       Shared Object                Symbol                          
+# ........  ............  ...........................  ................................
+#
+    34.69%  rte-worker-2  nflr                         [.] worker_fsm_amac_thread
+    15.63%  rte-worker-2  libc-2.31.so                 [.] __memcmp_avx2_movbe
+    15.62%  rte-worker-2  nflr                         [.] interval_tree_compare
+    13.13%  rte-worker-2  nflr                         [.] interval_tree_load_key
+     4.65%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_decompress_v
+     3.24%  rte-worker-2  nflr                         [.] cuckoo_hash_first_test
+     2.75%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_handle_completion
+     2.58%  rte-worker-2  nflr                         [.] cuckoo_hash_first_hash
+     2.15%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_rx_burst_vec
+     1.48%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_burst_none_empw
+     1.21%  rte-worker-2  nflr                         [.] send_packet
+     0.96%  rte-worker-2  nflr                         [.] upf_encapsulate
+     0.69%  rte-worker-2  nflr                         [.] cuckoo_hash_get_key
+     0.44%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_process_v
+     0.23%  rte-worker-2  nflr                         [.] interval_tree_get_key
+     0.08%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mp_enqueue
+     0.05%  rte-worker-2  nflr                         [.] cuckoo_hash_second_test
+     0.03%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mc_dequeue
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] timekeeping_advance
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] sync_regs
+     0.02%  rte-worker-2  ld-2.31.so                   [.] __tls_get_addr
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] perf_event_task_tick
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock_irqsave
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] update_load_avg
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] task_tick_fair
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] update_curr
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] ktime_get_update_offsets_now
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] update_fast_timekeeper
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __update_load_avg_se
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] tick_program_event
+     0.02%  rte-worker-2  nflr                         [.] cuckoo_hash_second_hash
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] read_tsc
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] irqentry_exit_to_user_mode
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __intel_pmu_disable_all
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] arch_scale_freq_tick
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] error_entry
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock_irq
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] exit_to_user_mode_prepare
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] run_posix_cpu_timers
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] lapic_next_deadline
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __calc_delta
+     0.00%  perf          [kernel.kallsyms]            [k] __virt_addr_valid
+     0.00%  perf          [kernel.kallsyms]            [k] native_flush_tlb_one_user
+     0.00%  perf          [kernel.kallsyms]            [k] perf_event_nmi_handler
+     0.00%  perf          [kernel.kallsyms]            [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

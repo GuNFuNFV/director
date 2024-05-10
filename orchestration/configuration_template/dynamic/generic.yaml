@@ -1,0 +1,6 @@
+dynamic_configuration_list: []
+name: generic
+options:
+- name: generic_access_size
+- name: generic_access_mode
+static_configuration_list: []

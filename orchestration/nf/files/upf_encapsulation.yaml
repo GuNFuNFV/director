@@ -1,0 +1,7 @@
+category: stateful_action
+flow_state_variables:
+  - name: generic_state_variable
+    size: 512 # 512/64= 8 cache lines
+transitions:
+    - Start, packet -> upf_encapsulate
+    - upf_encapsulate, packet -> End

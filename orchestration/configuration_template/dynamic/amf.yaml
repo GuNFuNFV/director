@@ -1,0 +1,9 @@
+dynamic_configuration_list: []
+name: amf
+options:
+  - name: reserved
+  - name: prefetch_mode
+#- name: generic_access_size
+#- name: generic_access_mode
+static_configuration_list: []
+

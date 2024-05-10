@@ -1,0 +1,13 @@
+# this mapping is from the nf type to the configuration name
+# sometimes different nftype may share the same configuration type\
+cuckoo_hash: cuckoo_hash
+cuckoo_hash_rtc: cuckoo_hash
+generic: generic
+traffic_generator: traffic_generator
+passthrough: passthrough
+amf: amf
+cuckoo_hash_non_temporal: cuckoo_hash
+interval_tree_rtc: interval_tree
+interval_tree: interval_tree
+upf_encapsulation: upf_encapsulation
+bess_nat: bess_nat

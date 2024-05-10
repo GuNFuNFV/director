@@ -1,0 +1,105 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cycles'
+# Event count (approx.): 5627560022
+#
+# Overhead  Command       Shared Object                Symbol                              
+# ........  ............  ...........................  ....................................
+#
+    34.65%  rte-worker-2  nflr                         [.] worker_fsm_amac_thread
+    17.42%  rte-worker-2  nflr                         [.] write_variable
+    13.03%  rte-worker-2  libc-2.31.so                 [.] __memset_avx2_unaligned_erms
+     6.53%  rte-worker-2  nflr                         [.] read_variable
+     5.68%  rte-worker-2  libc-2.31.so                 [.] __memcmp_avx2_movbe
+     2.12%  rte-worker-2  nflr                         [.] handleUplinkNASTransportMain
+     1.74%  rte-worker-2  nflr                         [.] 0x00000000000048d4
+     1.46%  rte-worker-2  nflr                         [.] HandleNAS
+     1.21%  rte-worker-2  nflr                         [.] cuckoo_hash_first_test
+     0.83%  rte-worker-2  nflr                         [.] RanUeFindByAmfUeNgapID
+     0.81%  rte-worker-2  nflr                         [.] cuckoo_hash_first_hash
+     0.67%  rte-worker-2  nflr                         [.] 0x00000000000048d0
+     0.65%  rte-worker-2  libc-2.31.so                 [.] __memset_chk_avx2_unaligned_erms
+     0.63%  rte-worker-2  nflr                         [.] UpdateLocation
+     0.53%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_handle_completion
+     0.52%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_decompress_v
+     0.44%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_rx_burst_vec
+     0.44%  rte-worker-2  nflr                         [.] Registered
+     0.44%  rte-worker-2  nflr                         [.] Decode
+     0.43%  rte-worker-2  nflr                         [.] AccessType
+     0.42%  rte-worker-2  nflr                         [.] ranUeFind
+     0.39%  rte-worker-2  nflr                         [.] GetNsiInformationFromSnssai
+     0.37%  rte-worker-2  librte_net_mlx5.so.23.0      [.] mlx5_tx_burst_none_empw
+     0.36%  rte-worker-2  nflr                         [.] PduSessionID
+     0.35%  rte-worker-2  nflr                         [.] Dnn
+     0.33%  rte-worker-2  nflr                         [.] SendCreateSmContextRequest
+     0.33%  rte-worker-2  libc-2.31.so                 [.] 0x000000000018bb5d
+     0.33%  rte-worker-2  nflr                         [.] cuckoo_hash_get_key
+     0.33%  rte-worker-2  nflr                         [.] transport5GSMMessage
+     0.32%  rte-worker-2  nflr                         [.] buildCreateSmContextRequest
+     0.32%  rte-worker-2  nflr                         [.] Dispatch
+     0.30%  rte-worker-2  nflr                         [.] CreatePDUSession
+     0.29%  rte-worker-2  nflr                         [.] ServingAMF
+     0.29%  rte-worker-2  nflr                         [.] SmfUri
+     0.28%  rte-worker-2  nflr                         [.] SetDnn
+     0.28%  rte-worker-2  nflr                         [.] send_packet
+     0.27%  rte-worker-2  nflr                         [.] SetUserLocation
+     0.27%  rte-worker-2  nflr                         [.] Snssai
+     0.27%  rte-worker-2  nflr                         [.] SetSnssai
+     0.27%  rte-worker-2  nflr                         [.] SetSmfID
+     0.27%  rte-worker-2  nflr                         [.] SearchNssfNSSelectionInstance
+     0.26%  rte-worker-2  nflr                         [.] HandleULNASTransport
+     0.23%  rte-worker-2  nflr                         [.] SelectSmf
+     0.22%  rte-worker-2  nflr                         [.] SetNsInstance
+     0.21%  rte-worker-2  nflr                         [.] SetSmContextRef
+     0.21%  rte-worker-2  nflr                         [.] NSSelectionGetForPduSession
+     0.21%  rte-worker-2  nflr                         [.] SmContextFindByPDUSessionID
+     0.20%  rte-worker-2  nflr                         [.] GetIPv4Uri
+     0.20%  rte-worker-2  nflr                         [.] NewSmContext
+     0.18%  rte-worker-2  nflr                         [.] SetSmfUri
+     0.18%  rte-worker-2  nflr                         [.] StoreSmContext
+     0.15%  rte-worker-2  nflr                         [.] SetAccessType
+     0.14%  rte-worker-2  nflr                         [.] dispatchMain
+     0.12%  rte-worker-2  nflr                         [.] handlerUplinkNASTransport
+     0.07%  rte-worker-2  librte_net_mlx5.so.23.0      [.] rxq_cq_process_v
+     0.07%  rte-worker-2  nflr                         [.] cuckoo_hash_second_test
+     0.05%  rte-worker-2  [kernel.kallsyms]            [k] __update_load_avg_se
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] update_fast_timekeeper
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] hrtimer_interrupt
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] timekeeping_advance
+     0.03%  rte-worker-2  [kernel.kallsyms]            [k] ktime_get_update_offsets_now
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] __update_load_avg_cfs_rq
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] sync_regs
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] tick_do_update_jiffies64
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] pvclock_gtod_notify
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] rcu_sched_clock_irq
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] update_cfs_group
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] cpuacct_charge
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] perf_event_task_tick
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] tick_sched_do_timer
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] task_tick_fair
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] perf_swevent_start
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] decay_load
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] scheduler_tick
+     0.02%  rte-worker-2  [kernel.kallsyms]            [k] _raw_spin_lock_irqsave
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] native_queued_spin_lock_slowpath
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] rcu_gp_kthread_wake
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] native_irq_return_iret
+     0.01%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mp_enqueue
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] __acct_update_integrals
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] ksoftirqd_running
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] update_load_avg
+     0.01%  rte-worker-2  [kernel.kallsyms]            [k] timerqueue_add
+     0.01%  rte-worker-2  librte_mempool_ring.so.23.0  [.] common_ring_mc_dequeue
+     0.00%  perf          [kernel.kallsyms]            [k] __kmalloc_node
+     0.00%  perf          [kernel.kallsyms]            [k] ghes_copy_tofrom_phys
+     0.00%  perf          [kernel.kallsyms]            [k] sched_clock
+     0.00%  perf          [kernel.kallsyms]            [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

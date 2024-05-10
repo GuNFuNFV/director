@@ -1,0 +1,2 @@
+nflambda_runtime_path: "/home/ziyan/project/nflambda_runtime/cmake-build-release/nflr"
+parameters: "-a 3b:00.0,mprq_en=1,mprq_log_stride_num=8 -n 8 -l 0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46"

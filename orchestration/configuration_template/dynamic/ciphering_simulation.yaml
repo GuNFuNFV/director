@@ -1,0 +1,9 @@
+dynamic_configuration_list: []
+name: ciphering_simulation
+options:
+  - name: reserved
+  - name: probability
+#- name: generic_access_size
+#- name: generic_access_mode
+static_configuration_list: []
+

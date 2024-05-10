@@ -1,0 +1,7 @@
+dynamic_configuration_list: []
+name: cuckoo_hash
+options:
+- name: cuckoo_hash_key_size
+- name: cuckoo_hash_header_type
+- name: cuckoo_hash_entry_num
+static_configuration_list: []

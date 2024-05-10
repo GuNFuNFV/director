@@ -1,0 +1,14 @@
+category: stateful_match
+parameters:
+    - cuckoo_hash_entry_num
+    - cuckoo_hash_key_size
+    - cuckoo_hash_header_type
+transitions:
+    - Start, packet -> cuckoo_hash_get_key_non_temporal
+    - cuckoo_hash_get_key_non_temporal, packet.cuckoo_hash_get_key_done -> cuckoo_hash_first_hash_non_temporal
+    - cuckoo_hash_first_hash_non_temporal, packet.cuckoo_hash_first_hash_done -> cuckoo_hash_first_test
+    - cuckoo_hash_first_test_non_temporal, packet.cuckoo_hash_test_success -> End
+    - cuckoo_hash_first_test_non_temporal, packet.cuckoo_hash_first_test_failure -> cuckoo_hash_second_hash_non_temporal
+    - cuckoo_hash_second_hash_non_temporal, packet.cuckoo_hash_second_hash_done -> cuckoo_hash_second_test_non_temporal
+    - cuckoo_hash_second_test_non_temporal, packet.cuckoo_hash_test_success -> End
+    - cuckoo_hash_second_test_non_temporal, packet.drop -> End

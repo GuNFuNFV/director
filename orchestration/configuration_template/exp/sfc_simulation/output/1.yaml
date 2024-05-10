@@ -1,0 +1,31 @@
+machine_num: 2
+machine#0:
+  machine_ip: 128.101.118.41
+  worker_num: 1
+  worker#0:
+    num_possible_interleaved_threads: 2
+    worker_composed_nf: sfc_simulation
+    cuckoo_hash#1:
+      cuckoo_hash_entry_num: 20
+      cuckoo_hash_header_type: 0
+      cuckoo_hash_key_size: 16
+      sfc_simulation#2:
+        datapacking: 1
+        reserved: 0
+        sfc_length: 1
+machine#1:
+  machine_ip: 128.101.118.40
+  worker_num: 1
+  worker#0:
+    num_possible_interleaved_threads: 2
+    worker_composed_nf: traffic_generator
+    traffic_generator#0:
+      traffic_class_num: 1
+      traffic_class#0:
+        destination_instance: 0
+        flow_id_lower: 0
+        flow_id_upper: 1048576
+        packet_size: 64
+        proportion: 100
+        subflow_id_lower: 0
+        subflow_id_upper: 0

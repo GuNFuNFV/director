@@ -1,0 +1,4 @@
+worker_composed_nf$machine#0-worker#0 available value(cuckoo_hash_generic, cuckoo_rtc_generic, passthrough, traffic_generator): ['cuckoo_rtc_generic']
+worker_composed_nf$machine#0-worker#1 available value(cuckoo_hash_generic, cuckoo_rtc_generic, passthrough, traffic_generator): ['cuckoo_rtc_generic']
+worker_composed_nf$machine#1-worker#0 available value(cuckoo_hash_generic, cuckoo_rtc_generic, passthrough, traffic_generator): ['traffic_generator']
+worker_composed_nf$machine#1-worker#1 available value(cuckoo_hash_generic, cuckoo_rtc_generic, passthrough, traffic_generator): ['traffic_generator']

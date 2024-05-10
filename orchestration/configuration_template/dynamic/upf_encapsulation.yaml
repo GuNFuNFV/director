@@ -1,0 +1,5 @@
+dynamic_configuration_list: []
+name: upf_encapsulation
+options:
+#- name: header_type
+static_configuration_list: []

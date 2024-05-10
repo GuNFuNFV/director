@@ -1,0 +1,10 @@
+category: stateful_action
+parameters:
+  - generic_access_mode
+  - generic_access_size
+flow_state_variables:
+  - name: generic_state_variable
+    size: 512 # 512/64= 8 cache lines
+transitions:
+  - Start , packet -> Self
+  - Self, packet -> End

@@ -1,0 +1,10 @@
+dynamic_configuration_list: []
+name: sfc_simulation
+options:
+  - name: reserved
+  - name: datapacking
+  - name: sfc_length
+#- name: generic_access_size
+#- name: generic_access_mode
+static_configuration_list: []
+

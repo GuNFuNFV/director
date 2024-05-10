@@ -1,0 +1,58 @@
+machine#0:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    cuckoo_hash#1:
+      cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+      cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+      cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+      generic#2:
+        cuckoo_hash#3:
+          cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+          cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+          cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+          generic#4:
+            cuckoo_hash#5:
+              cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+              cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+              cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+              generic#6:
+                cuckoo_hash#7:
+                  cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+                  cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+                  cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+                  generic#8:
+                    cuckoo_hash#9:
+                      cuckoo_hash_entry_num: '%cuckoo_hash_entry_num%'
+                      cuckoo_hash_header_type: '%cuckoo_hash_header_type%'
+                      cuckoo_hash_key_size: '%cuckoo_hash_key_size%'
+                      generic#10:
+                        generic_access_mode: '%generic_access_mode%'
+                        generic_access_size: '%generic_access_size%'
+                    generic_access_mode: '%generic_access_mode%'
+                    generic_access_size: '%generic_access_size%'
+                generic_access_mode: '%generic_access_mode%'
+                generic_access_size: '%generic_access_size%'
+            generic_access_mode: '%generic_access_mode%'
+            generic_access_size: '%generic_access_size%'
+        generic_access_mode: '%generic_access_mode%'
+        generic_access_size: '%generic_access_size%'
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    worker_composed_nf: cuckoo_hash_generic_5
+  worker_num: 1
+machine#1:
+  machine_ip: '%machine_ip%'
+  worker#0:
+    num_possible_interleaved_threads: '%num_possible_interleaved_threads%'
+    traffic_generator#0:
+      traffic_class#0:
+        destination_instance: '%destination_instance%'
+        flow_id_lower: '%flow_id_lower%'
+        flow_id_upper: '%flow_id_upper%'
+        packet_size: '%packet_size%'
+        proportion: '%proportion%'
+        subflow_id_lower: '%subflow_id_lower%'
+        subflow_id_upper: '%subflow_id_upper%'
+      traffic_class_num: 1
+    worker_composed_nf: traffic_generator
+  worker_num: 1
+machine_num: 2

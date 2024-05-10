@@ -1,0 +1,1646 @@
+DistributedRuntimeSetting:
+  0:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 64
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  1:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 128
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  2:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 256
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  3:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 512
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  4:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 1024
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  5:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 1280
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []
+  6:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                datablock_offset: 0
+                entry_event: 1
+              2:
+                ControlState: 2
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 0
+              3:
+                ControlState: 2
+                NFDefinition: 3
+                NFType: 3
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              4:
+                ControlState: 2
+                NFDefinition: 4
+                NFType: 4
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              5:
+                ControlState: 2
+                NFDefinition: 5
+                NFType: 5
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              6:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: false
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              7:
+                ControlState: 2
+                NFDefinition: 6
+                NFType: 6
+                abstract: true
+                datablock_id: 1
+                datablock_offset: 0
+                entry_event: 3
+              8:
+                ControlState: 0
+                NFDefinition: 8
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  cuckoo_hash_entry_num: 20
+                  cuckoo_hash_header_type: 0
+                  cuckoo_hash_key_size: 16
+                  transition:
+                    cuckoo_hash_rtc.packet.cuckoo_hash_test_success: 2
+                type: cuckoo_hash_rtc
+              2:
+                composed_nf: '2'
+                parameters:
+                  prefetch_mode: 2
+                  reserved: 0
+                  transition:
+                    amf_authentication_handler.packet: 8
+                    amf_context_setup_handler.packet: 8
+                    amf_dispatcher.amf_session.authentication: 6
+                    amf_dispatcher.amf_session.context_setup: 5
+                    amf_dispatcher.amf_session.registered: 4
+                    amf_dispatcher.amf_session.unregistered: 3
+                    amf_registered_handler.packet: 8
+                    amf_unregistered_handler.packet: 8
+                type: amf
+            DataBlock:
+              0:
+                control_state_id: 1
+                datablock_id: 0
+                num_flow_differentiated_per_entry: 20
+                size: 8
+                total_entry_num: 0
+                type: cuckoo_hash_rtc
+              1:
+                control_state_id: 2
+                datablock_id: 1
+                num_flow_differentiated_per_entry: 0
+                size: 512
+                total_entry_num: 20
+                type: per_flow_state
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: cuckoo_hash_rtc
+              2:
+                is_abstract: false
+                name: '2_0'
+                type: amf_dispatcher
+              3:
+                is_abstract: false
+                name: '2_1'
+                type: amf_unregistered_handler
+              4:
+                is_abstract: false
+                name: '2_2'
+                type: amf_registered_handler
+              5:
+                is_abstract: false
+                name: '2_3'
+                type: amf_context_setup_handler
+              6:
+                is_abstract: false
+                name: '2_4'
+                type: amf_authentication_handler
+              7:
+                is_abstract: true
+                name: '2'
+                type: amf
+              8:
+                is_abstract: false
+                name: '3'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: cuckoo_hash_rtc
+              2: amf_dispatcher
+              3: amf_unregistered_handler
+              4: amf_registered_handler
+              5: amf_context_setup_handler
+              6: amf_authentication_handler
+              7: amf
+              8: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 0
+              worker_tx_port: 0
+        ip: 128.101.118.41
+      1:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 1
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 3
+              1:
+                ControlState: 0
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: -1
+                datablock_offset: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '0'
+                parameters:
+                  traffic_class#0:
+                    destination_instance: 0
+                    flow_id_lower: 0
+                    flow_id_upper: 1048576
+                    packet_size: 1518
+                    proportion: 100
+                    subflow_id_lower: 0
+                    subflow_id_upper: 0
+                  traffic_class_num: 1
+                  transition:
+                    traffic_generator.packet: 1
+                type: traffic_generator
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: traffic_generator
+              1:
+                is_abstract: false
+                name: '1'
+                type: send_packet
+            NFType:
+              0: traffic_generator
+              1: send_packet
+            WorkerParameters:
+              initial_actor: 0
+              worker_core_id: 2
+              worker_num_interleaved: 16
+              worker_queue_id: 0
+              worker_rx_port: 0
+              worker_tx_mode: 1
+              worker_tx_port: 0
+        ip: 128.101.118.40
+    optimization_options: []

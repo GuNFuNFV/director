@@ -1,0 +1,62 @@
+DistributedRuntimeSetting:
+  0:
+    RuntimeSetting:
+      0:
+        WorkerSetting:
+          0:
+            Actor:
+              0:
+                ControlState: 0
+                NFDefinition: 0
+                NFType: 0
+                abstract: false
+                datablock_id: 0
+                entry_event: 3
+              1:
+                ControlState: 1
+                NFDefinition: 1
+                NFType: 1
+                abstract: false
+                datablock_id: 0
+                entry_event: 2
+              2:
+                ControlState: 0
+                NFDefinition: 2
+                NFType: 2
+                abstract: false
+                datablock_id: 0
+                entry_event: 2
+            ControlState:
+              0: {}
+              1:
+                composed_nf: '1'
+                parameters:
+                  transition:
+                    passthrough.packet: 2
+                type: passthrough
+            DataBlock: {}
+            NFDefinition:
+              0:
+                is_abstract: false
+                name: '0'
+                type: receive_packet
+              1:
+                is_abstract: false
+                name: '1'
+                type: passthrough
+              2:
+                is_abstract: false
+                name: '2'
+                type: send_packet
+            NFType:
+              0: receive_packet
+              1: passthrough
+              2: send_packet
+            WorkerParameters:
+              initial_actor: 1
+              worker_core_id: 2
+              worker_num_interleaved: 1
+              worker_port_id: 0
+              worker_queue_id: 0
+              worker_tx_mode: 0
+        ip: 128.101.118.41

@@ -1,0 +1,6 @@
+category: system
+parameters:
+  - queue_id
+  - port_id
+transitions:
+  - Start, packet -> Self

@@ -1,0 +1,90 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 272  of event 'cycles'
+# Event count (approx.): 8740517
+#
+# Overhead  Command  Shared Object      Symbol                               
+# ........  .......  .................  .....................................
+#
+    24.27%  swapper  [kernel.kallsyms]  [k] acpi_processor_ffh_cstate_enter
+     8.06%  swapper  [kernel.kallsyms]  [k] _raw_spin_lock_irqsave
+     6.77%  swapper  [kernel.kallsyms]  [k] timer_clear_idle
+     4.95%  swapper  [kernel.kallsyms]  [k] ktime_get_update_offsets_now
+     3.88%  perf     [kernel.kallsyms]  [k] cpuacct_charge
+     2.80%  swapper  [kernel.kallsyms]  [k] tick_nohz_next_event
+     2.67%  swapper  [kernel.kallsyms]  [k] native_irq_return_iret
+     2.45%  swapper  [kernel.kallsyms]  [k] native_write_msr
+     2.42%  swapper  [kernel.kallsyms]  [k] tick_do_update_jiffies64
+     2.38%  swapper  [kernel.kallsyms]  [k] timekeeping_advance
+     2.26%  swapper  [kernel.kallsyms]  [k] menu_select
+     2.18%  swapper  [kernel.kallsyms]  [k] native_read_msr
+     1.99%  swapper  [kernel.kallsyms]  [k] update_vsyscall
+     1.79%  swapper  [kernel.kallsyms]  [k] arch_scale_freq_tick
+     1.78%  swapper  [kernel.kallsyms]  [k] cpuidle_enter_state
+     1.52%  swapper  [kernel.kallsyms]  [k] ktime_get
+     1.34%  swapper  [kernel.kallsyms]  [k] rcu_sched_clock_irq
+     1.32%  swapper  [kernel.kallsyms]  [k] perf_event_task_tick
+     1.13%  swapper  [kernel.kallsyms]  [k] tick_sched_timer
+     1.13%  swapper  [kernel.kallsyms]  [k] update_rq_clock
+     1.12%  swapper  [kernel.kallsyms]  [k] note_gp_changes
+     0.98%  swapper  [kernel.kallsyms]  [k] rcu_core
+     0.96%  swapper  [kernel.kallsyms]  [k] native_sched_clock
+     0.93%  swapper  [kernel.kallsyms]  [k] lapic_next_deadline
+     0.92%  swapper  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.85%  swapper  [kernel.kallsyms]  [k] restore_regs_and_return_to_kernel
+     0.79%  swapper  [kernel.kallsyms]  [k] rcu_report_qs_rnp
+     0.79%  swapper  [kernel.kallsyms]  [k] rcu_eqs_exit.constprop.0
+     0.78%  swapper  [kernel.kallsyms]  [k] __softirqentry_text_start
+     0.78%  swapper  [kernel.kallsyms]  [k] _raw_spin_lock_irq
+     0.77%  swapper  [kernel.kallsyms]  [k] native_queued_spin_lock_slowpath
+     0.76%  swapper  [kernel.kallsyms]  [k] update_load_avg
+     0.69%  swapper  [kernel.kallsyms]  [k] read_tsc
+     0.63%  swapper  [kernel.kallsyms]  [k] sysvec_apic_timer_interrupt
+     0.61%  swapper  [kernel.kallsyms]  [k] scheduler_tick
+     0.61%  swapper  [kernel.kallsyms]  [k] acpi_idle_enter
+     0.59%  swapper  [kernel.kallsyms]  [k] update_dl_rq_load_avg
+     0.57%  swapper  [kernel.kallsyms]  [k] perf_swevent_stop
+     0.53%  swapper  [kernel.kallsyms]  [k] rcu_nmi_enter
+     0.52%  swapper  [kernel.kallsyms]  [k] cpuidle_enter
+     0.49%  swapper  [kernel.kallsyms]  [k] error_return
+     0.43%  swapper  [kernel.kallsyms]  [k] update_process_times
+     0.43%  swapper  [kernel.kallsyms]  [k] calc_global_load
+     0.37%  swapper  [kernel.kallsyms]  [k] tsc_verify_tsc_adjust
+     0.36%  swapper  [kernel.kallsyms]  [k] rcu_irq_exit
+     0.34%  perf     [kernel.kallsyms]  [k] __sched_setaffinity
+     0.32%  swapper  [kernel.kallsyms]  [k] _raw_spin_trylock
+     0.29%  swapper  [kernel.kallsyms]  [k] intel_tfa_pmu_enable_all
+     0.29%  swapper  [kernel.kallsyms]  [k] hrtimer_interrupt
+     0.29%  perf     [kernel.kallsyms]  [k] native_flush_tlb_one_user
+     0.29%  swapper  [kernel.kallsyms]  [k] calc_global_load_tick
+     0.27%  swapper  [kernel.kallsyms]  [k] get_cpu_device
+     0.27%  swapper  [kernel.kallsyms]  [k] rb_insert_color
+     0.27%  swapper  [kernel.kallsyms]  [k] perf_swevent_start
+     0.25%  swapper  [kernel.kallsyms]  [k] __remove_hrtimer
+     0.25%  swapper  [kernel.kallsyms]  [k] perf_pmu_nop_void
+     0.24%  swapper  [kernel.kallsyms]  [k] enqueue_hrtimer
+     0.23%  swapper  [kernel.kallsyms]  [k] x86_pmu_disable
+     0.20%  swapper  [kernel.kallsyms]  [k] irq_exit_rcu
+     0.20%  swapper  [kernel.kallsyms]  [k] perf_mux_hrtimer_handler
+     0.18%  swapper  [kernel.kallsyms]  [k] raw_spin_rq_unlock
+     0.17%  swapper  [kernel.kallsyms]  [k] update_blocked_averages
+     0.15%  swapper  [kernel.kallsyms]  [k] __lock_text_start
+     0.15%  swapper  [kernel.kallsyms]  [k] menu_reflect
+     0.15%  swapper  [kernel.kallsyms]  [k] tick_nohz_irq_exit
+     0.14%  swapper  [kernel.kallsyms]  [k] call_cpuidle
+     0.14%  swapper  [kernel.kallsyms]  [k] rcu_eqs_enter.constprop.0
+     0.12%  swapper  [kernel.kallsyms]  [k] task_tick_idle
+     0.11%  swapper  [kernel.kallsyms]  [k] __hrtimer_next_event_base
+     0.11%  swapper  [kernel.kallsyms]  [k] account_process_tick
+     0.10%  swapper  [kernel.kallsyms]  [k] pvclock_gtod_notify
+     0.10%  swapper  [kernel.kallsyms]  [k] timekeeping_update
+     0.02%  perf     [kernel.kallsyms]  [k] native_sched_clock
+     0.00%  perf     [kernel.kallsyms]  [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

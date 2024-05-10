@@ -1,0 +1,11 @@
+dynamic_configuration_list: []
+name: traffic_class
+options:
+- name: flow_id_lower
+- name: flow_id_upper
+- name: subflow_id_lower
+- name: subflow_id_upper
+- name: destination_instance
+- name: packet_size
+- name: proportion
+static_configuration_list: []

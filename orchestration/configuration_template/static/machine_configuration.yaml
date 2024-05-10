@@ -1,0 +1,8 @@
+name: machine_configuration
+options:
+- name: machine_ip
+- conjecture: '1'
+  name: worker_num
+static_configuration_list:
+- instance_num: worker_num
+  name: worker_configuration

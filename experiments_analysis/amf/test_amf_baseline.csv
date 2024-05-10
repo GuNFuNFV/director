@@ -1,0 +1,2 @@
+,index,0_throughput,1_throughput,LLC-load-misses,LLC-loads,l2_rqsts.demand_data_rd_miss,l2_rqsts.all_demand_data_rd,L1-dcache-load-misses,L1-dcache-loads,instructions,cycles,llc_miss_rate,l1_miss_rate,l2_miss_rate,ipc
+0,0,[[3718383]],[[31457280]],[3834520.980050711],[6692485.910301186],[6631944.497920509],[23360379.674915828],[71002843.59388474],[1154708887.6941824],[3733413720.67905],[5456889953.774115],[0.5729591412584899],[0.06148982167762565],[0.2838971194052053],[0.6841651109524267]
